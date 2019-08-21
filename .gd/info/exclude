@@ -3,32 +3,37 @@
 # For a project mostly in C, the following would be a good set of
 # exclude patterns (uncomment them if you want to use them):
 # *.[oa]
-# *~
+*~
 
 .gd/**
 !.gd/info/
 !.gd/info/exclude
 
-prv/
-pub/
-public_html/
-nobackup/
-mailbefore/
-mail/
-gopath/
-dotfiles/
-dane/
+/prv/
+/pub/
+/public_html/
+/nobackup/
+/mail*/
+/gopath/
+/dotfiles/
+/dane/
 
-nobackup
-MailAfter/
+/nobackup
+/Mail*/
 
-.password-store/
-.bash_history 
-.histfile 
-.viminfo
+/.password-store/
+/.bash_history 
+/.histfile 
+/.viminfo
 
-.ssh/**
-!.ssh/config
+/.ssh/**
+/!.ssh/config
 
-.project
-.plan
+/.project
+/.plan
+
+/.b2_account_info
+
+/.spamassasin/
+/.zcompdump
+
