@@ -8,3 +8,16 @@
 .gd/**
 !.gd/info/
 !.gd/info/exclude
+
+prv/
+pub/
+public_html/
+nobackup/
+mailbefore/
+mail/
+gopath/
+dotfiles/
+dane/
+
+nobackup
+MailAfter/
