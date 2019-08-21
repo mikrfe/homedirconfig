@@ -69,8 +69,8 @@ Plugin 'majutsushi/tagbar'
 Plugin 'vim-jp/vim-go-extra'
 Plugin 'ledger/vim-ledger'
 Plugin 'bling/vim-airline'
-Plugin 'edkolev/promptline.vim'
-Plugin 'edkolev/tmuxline.vim'
+"Plugin 'edkolev/promptline.vim'
+"Plugin 'edkolev/tmuxline.vim'
 Plugin 'fatih/vim-go'
 Plugin 'wannesm/wmgraphviz.vim'
 "Plugin 'garyburd/go-explorer'
@@ -246,7 +246,7 @@ let g:airline_theme             = 'powerlineish'
 let g:airline#extensions#branch#enabled     = 1
 let g:airline#extensions#syntastic#enabled  = 1
 " vim-powerline symbols
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 "let g:airline_left_sep          = '⮀'
 "let g:airline_left_alt_sep      = '⮁'
 "let g:airline_left_sep      = '⮁'
@@ -301,10 +301,10 @@ set nowrap  " disable line wrapping
 set mouse=a  " enable mouse support in console
 set number  " show line numbers
 
-let g:promptline_theme = 'powerlineclone'
-let g:promptline_preset = {
-	\'a': [ promptline#slices#host(), promptline#slices#user() ],
-	\'b': [ promptline#slices#cwd() ],
-	\'y' : [ promptline#slices#vcs_branch({'hg': 1,'svn': 0,'fossil': 0}) ],
-	\'z' : [ promptline#slices#python_virtualenv() ],
-	\'warn' : [ promptline#slices#last_exit_code(), promptline#slices#battery() ]}
+"let g:promptline_theme = 'powerlineclone'
+"let g:promptline_preset = {
+"	\'a': [ promptline#slices#host(), promptline#slices#user() ],
+"	\'b': [ promptline#slices#cwd() ],
+"	\'y' : [ promptline#slices#vcs_branch({'hg': 1,'svn': 0,'fossil': 0}) ],
+"	\'z' : [ promptline#slices#python_virtualenv() ],
+"	\'warn' : [ promptline#slices#last_exit_code(), promptline#slices#battery() ]}

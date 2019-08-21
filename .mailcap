@@ -1,0 +1,2 @@
+#text/html;                      w3m -I %{charset} -T text/html %s; nametemplate=%s.html
+text/html;                      links -force-html %s; nametemplate=%s.html

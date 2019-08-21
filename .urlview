@@ -1,0 +1,2 @@
+REGEXP (((http|https|ftp|gopher)|mailto)[.:][^ >"\t]*|www\.[-a-z0-9.]+)[^ .,;\t>">\):]
+COMMAND tempurlview=%s ; chromium $tempurlview || midori $tempurlview || w3m $tempurlview || echo $tempurlview 

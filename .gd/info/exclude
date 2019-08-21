@@ -5,9 +5,9 @@
 # *.[oa]
 *~
 
-.gd/**
-!.gd/info/
-!.gd/info/exclude
+/.gd/**
+!/.gd/info/
+!/.gd/info/exclude
 
 /prv/
 /pub/
@@ -25,9 +25,12 @@
 /.bash_history 
 /.histfile 
 /.viminfo
+/.node_repl_history
+/.oracle_jre_usage/
+/.cache/
 
 /.ssh/**
-/!.ssh/config
+!/.ssh/config
 
 /.project
 /.plan
@@ -39,3 +42,30 @@
 
 /.vim/bundle/
 /.vim/view/
+/.vim/plugged/
+
+/.mysql_history
+
+/.wget-hsts
+
+/.jdk/
+
+# temporary
+/.muttrc
+/.pinerc
+/.linuxbrew/
+
+/.procmailrc
+
+/.composer/
+
+/.mutt/**
+!/.mutt/colors.*
+
+/.lein/
+/.m2/
+
+/.signature
+
+/.cpan
+/.gem
