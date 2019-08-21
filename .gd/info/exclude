@@ -25,3 +25,10 @@ MailAfter/
 .password-store/
 .bash_history 
 .histfile 
+.viminfo
+
+.ssh/**
+!.ssh/config
+
+.project
+.plan
