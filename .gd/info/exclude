@@ -37,3 +37,5 @@
 /.spamassasin/
 /.zcompdump
 
+/.vim/bundle/
+/.vim/view/
