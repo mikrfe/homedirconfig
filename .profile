@@ -1,7 +1,7 @@
-PATH="$HOME/.linuxbrew/bin:$PATH"
 if [ -d "$HOME/.local/bin" ]; then
 	PATH="$HOME/.local/bin:$PATH"
 fi
+PATH="$HOME/.linuxbrew/bin:$PATH"
 export GOPATH="$HOME/gopath"
 export GOROOT="$HOME/.local/go"
 PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
