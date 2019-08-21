@@ -21,3 +21,7 @@ dane/
 
 nobackup
 MailAfter/
+
+.password-store/
+.bash_history 
+.histfile 
