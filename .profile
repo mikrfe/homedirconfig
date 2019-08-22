@@ -2,7 +2,7 @@ if [ -d "$HOME/.local/bin" ]; then
 	PATH="$HOME/.local/bin:$PATH"
 fi
 PATH="$HOME/.linuxbrew/bin:$PATH"
-export GOPATH="$HOME/gopath"
+export GOPATH="$HOME/.local/gopath"
 export GOROOT="$HOME/.local/go"
 PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
 
