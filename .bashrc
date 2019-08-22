@@ -1,7 +1,7 @@
 # ~/.bashrc
 
 # [[ $SHELL == "/bin/bash" ]] &&   # has no effect
-[ "${BASH_VERSINFO:-0}" -le 4 ] && (return $NO_FURTHER_PLEASE) && { NO_FURTHER_PLEASE=1 bash; return }
+[ "${BASH_VERSINFO:-0}" -le 4 ] && (return $NO_FURTHER_PLEASE) && { NO_FURTHER_PLEASE=1 bash; return; }
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
