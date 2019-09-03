@@ -135,6 +135,8 @@ let g:formatdef_cssbeautify = "'css-beautify -f - -t'"
 
 let g:pymode_rope = 0
 
+let g:syntastic_python_pyflakes_exe = 'python3 -m pyflakes'
+
 set laststatus=2
 syntax on
 "set cursorline
@@ -146,7 +148,10 @@ let g:tex_flavor='latex'
 :set guioptions-=r  "remove right-hand scroll bar
 :set guioptions-=L  "remove left-hand scroll bar
 if has('gui_running')
-	set guifont=Input\ Mono\ 13
+	"set guifont=Inconsolata\ 13 
+	"set guifont=-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+	set guifont=xos4\ Terminus\ 8
+	"Input\ Mono\ 13
 	set ghr=0
 endif
 
@@ -300,6 +305,8 @@ map <F10> :set wrap!<LF>  " toggle wrapping
 set nowrap  " disable line wrapping
 set mouse=a  " enable mouse support in console
 set number  " show line numbers
+
+let g:pandoc#spell#default_langs = ['pl', 'en']
 
 "let g:promptline_theme = 'powerlineclone'
 "let g:promptline_preset = {
