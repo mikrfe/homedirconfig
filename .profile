@@ -1,39 +1,40 @@
+test -z "$PROFILEREAD" && . /etc/profile || true
+
+export LANG=pl_PL.UTF-8
+export LC_CTYPE=pl_PL.UTF-8
+export LC_ALL=pl_PL.UTF-8
+
+export PATH="$HOME/.cargo/bin:$PATH"
+
 if [ -d "$HOME/.local/bin" ]; then
 	PATH="$HOME/.local/bin:$PATH"
 fi
-PATH="$HOME/.linuxbrew/bin:$PATH"
 export GOPATH="$HOME/.local/gopath"
 export GOROOT="$HOME/.local/go"
 PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
 
-PATH="$PATH:$HOME/mongodb/mongodb-linux-x86_64-3.2.7/bin"
+if [ -d "$HOME/.gem/ruby/2.6.0/bin" ]; then
+    PATH="$PATH:$HOME/.gem/ruby/2.6.0/bin"
+fi
+
+if [ -d "$HOME/.gem/ruby/2.5.0/bin" ]; then
+    PATH="$PATH:$HOME/.gem/ruby/2.5.0/bin"
+fi
+
+PATH="$HOME/.local/flutter/bin:/opt/dart-sdk/bin:$PATH"
+
 export PATH
 
-export LANG=pl_PL.utf8
-export LC_CTYPE=pl_PL.utf8
-export LC_ALL=pl_PL.utf8
+export ANDROID_HOME="$HOME/android-sdk"
 
-if [ "$TERM" == "rxvt-unicode-256color" ]; then
-	export TERM="xterm-256color"
-fi
+export PATH="$PATH":"$HOME/.pub-cache/bin"
 
+export LEDGER_FILE="$HOME/pieniadze/hledger.journal"
+
+#export NNTPSERVER='snews://nntp.aioe.org:563'
+#export NNTPSERVER='snews://news.eternal-september.org:563'
 #export NNTPSERVER='news.icm.edu.pl'
-export NNTPSERVER='nntp.aioe.org'
+#export NNTPSERVER='nntp.aioe.org'
+export NNTPSERVER="news.man.poznan.pl"
 
-# Start the gpg-agent if not already running
-if ! pgrep -x -u "${USER}" gpg-agent >/dev/null 2>&1; then
-  gpg-connect-agent /bye >/dev/null 2>&1
-fi
-
-# Set SSH to use gpg-agent
-unset SSH_AGENT_PID
-if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
-  export SSH_AUTH_SOCK="${HOME}/.gnupg/S.gpg-agent.ssh"
-fi
-
-# Set GPG TTY
-GPG_TTY=$(tty)
-export GPG_TTY
-
-# Refresh gpg-agent tty in case user switches into an X session
-gpg-connect-agent updatestartuptty /bye >/dev/null
+. /home/mf/.nix-profile/etc/profile.d/nix.sh
