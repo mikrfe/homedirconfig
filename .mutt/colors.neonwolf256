@@ -27,6 +27,8 @@ color status        brightcolor232  color39
 color indicator     brightcolor232  color154                        # selected email in index
 color tree          brightcolor165  color233                        # arrow in threads (`-->')
 
+color prompt        brightwhite     brightblack
+
 # basic monochrome screen
 mono bold           bold
 mono underline      underline
