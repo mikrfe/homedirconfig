@@ -19,7 +19,8 @@ alias gd='GIT_WORK_TREE="$HOME" GIT_DIR="$HOME/.gd" git'
 source ~/.bash_prompt.sh
 
 alias gcm='git commit -am'
-alias folgat='"$HOME/twitfol/folgat.sh"'
+
+alias folgat='"$GOPATH/src/github.com/ArchieT/twitfol/folgat.sh"'
 
 export GIT_PAGER="less -r"
 
