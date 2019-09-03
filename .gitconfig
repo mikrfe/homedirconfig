@@ -1,26 +1,37 @@
 [user]
-	email = archiet@platinum.edu.pl
+	email = m@mikf.pl
 	name = Michał Krzysztof Feiler
-	#signingkey = 880D22D6
+	signingkey = 1E369940CC7E01C4CFE8F20AE35C2D7C2C6AC724
 [gpg]
 	program = gpg2
 [github]
-	user = ArchieT
+	user = mikrfe
 [commit]
-	gpgsign = false
+	gpgsign = true
 [core]
 	pager = less -r
 [tag]
-	gpgsign = false
+	gpgsign = true
 [push]
 	default = simple
 [diff]
-	tool = vimdiff
+	tool = gvimdiff
 [merge]
-	tool = vimdiff
+	tool = gvimdiff
 [alias]
 	d = difftool
 	m = mergetool
 	c = commit -S -am
 	logs = log --show-signature
 	cis = commit -S
+[web]
+	browser = firefox
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+# This next lines include Netlify's Git Credential Helper configuration in your Git configuration.
+[include]
+  path = /home/mf/.netlify/helper/git-config
