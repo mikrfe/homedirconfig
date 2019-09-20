@@ -31,7 +31,8 @@ xss-lock -- xscreensaver-command -lock &
 xmodmap -e 'keycode 166=Prior'
 xmodmap -e 'keycode 167=Next'
 
-setxkbmap -option caps:super
+#setxkbmap -option caps:super
+setxkbmap -option caps:ctrl_modifier
 
 urxvtd -f
 
