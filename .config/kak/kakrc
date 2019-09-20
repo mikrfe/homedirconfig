@@ -6,3 +6,4 @@ lsp-enable
 hook global WinSetOption filetype=rust %{
         hook window BufWritePre .* lsp-formatting-sync
 }
+add-highlighter global/ number-lines
