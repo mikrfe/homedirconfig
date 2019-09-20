@@ -1,1 +1,38 @@
-/home/mf/dotfiles/.xprofile
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+ibus-daemon -drx
+
+xsetroot -fg "#444" -bg "#555" -mod 4 4
+# xflux -l 53.02 -g 18.60 -r 1 &
+# recollindex -m -w 60 &
+# numlockx &
+xset m 3/2 16 &
+menutray -i &
+# telegram-desktop -startintray &
+# electron --hidden /usr/lib/riot/ "$@" &
+# /opt/discord/Discord &
+nm-applet &
+# dropbox start &
+# dunst & #notification daemon - test with: notify-send --icon=gtk-info Test "This is a test"
+/usr/lib/xfce4/notifyd/xfce4-notifyd &
+pasystray &
+# solaar &
+#conky &
+tint2 &
+
+export COLORTERM=urxvtc
+export TERMINAL=urxvtc
+
+xscreensaver -no-splash &
+xss-lock -- xscreensaver-command -lock &
+/home/mf/dotfiles/ultranav.sh
+
+xmodmap -e 'keycode 166=Prior'
+xmodmap -e 'keycode 167=Next'
+
+setxkbmap -option caps:super
+
+urxvtd -f
+
+# vim:ft=sh
