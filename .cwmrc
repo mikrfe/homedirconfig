@@ -59,10 +59,12 @@ bind-key S4-d menu-cmd
 bind-key 4-d "rofi -show run"
 bind-key 4M-d menu-exec
 bind-key C4-d menu-exec-wm
-bind-key 4-f menu-window
+bind-key 4M-f menu-window
+bind-key 4S-f menu-window
 bind-key 4-semicolon window-maximize
+bind-key 4S-semicolon window-fullscreen
 bind-key C4M-f menu-window-hidden
-bind-key 4M-f "rofi -show window"
+bind-key 4-f "rofi -show window"
 #bind-key 4-a menu-group
 bind-key 4-a window-raise
 
@@ -163,7 +165,7 @@ bind-key C4M-r window-freeze #now thats mine but I'll change it I guess
 unbind-key CM-s #window-stick I guess
 bind-key C4M-s window-stick
 unbind-key CM-f #bind-key CM-f window-fullscreen #redefault
-bind-key S4-f window-fullscreen
+#bind-key S4-f window-fullscreen
 unbind-key CM-m #window-maximize
 bind-key S4-a window-maximize
 unbind-key CM-equal #window-vmaximize
