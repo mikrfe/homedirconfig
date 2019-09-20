@@ -44,7 +44,7 @@ fontname "-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1"
 command term urxvtc
 
 bind-key 4-Return urxvtc
-bind-key 4S-Return urxvtc kak
+bind-key 4S-Return "urxvtc kak"
 
 command lock "xscreensaver-command -lock"
 
