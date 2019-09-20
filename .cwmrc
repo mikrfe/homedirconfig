@@ -45,6 +45,7 @@ command term urxvtc
 
 bind-key 4-Return urxvtc
 bind-key 4S-Return "urxvtc kak"
+bind-key C-Return urxvtc
 
 command lock "xscreensaver-command -lock"
 
