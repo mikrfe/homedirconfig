@@ -5,7 +5,7 @@
 [gpg]
 	program = gpg2
 [github]
-	user = mikrfe
+	user = mkf
 [commit]
 	gpgsign = true
 [core]
