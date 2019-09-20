@@ -28,7 +28,8 @@ export GIT_PAGER="less -r"
 
 #alias vi='nvim'
 #alias nvi="nvim"
-export EDITOR='vim'
+#export EDITOR='vim'
+export EDITOR='kak'
 
 alias vi='vim'
 alias gvi='gvim'
