@@ -33,6 +33,7 @@ xmodmap -e 'keycode 167=Next'
 
 #setxkbmap -option caps:super
 setxkbmap -option caps:ctrl_modifier
+setxkbmap -option compose:menu
 
 urxvtd -f
 
