@@ -7,11 +7,11 @@
 [github]
 	user = mkf
 [commit]
-	gpgsign = true
+	gpgsign = false
 [core]
 	pager = less -r
 [tag]
-	gpgsign = true
+	gpgsign = false
 [push]
 	default = simple
 [diff]
