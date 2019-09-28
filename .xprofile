@@ -19,7 +19,8 @@ nm-applet &
 pasystray &
 # solaar &
 #conky &
-[ "$XDG_SESSION_DESKTOP" == "cwm" ] && tint2 &
+[ -z "$PICKED_SESSION" ] && PICKED_SESSION="$XDG_SESSION_DESKTOP"
+[ "$PICKED_SESSION" == "cwm" ] && tint2 &
 
 export COLORTERM=urxvtc
 export TERMINAL=urxvtc
