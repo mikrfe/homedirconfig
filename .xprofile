@@ -19,7 +19,7 @@ nm-applet &
 pasystray &
 # solaar &
 #conky &
-tint2 &
+[ "$XDG_SESSION_DESKTOP" == "cwm" ] && tint2 &
 
 export COLORTERM=urxvtc
 export TERMINAL=urxvtc
