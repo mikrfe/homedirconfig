@@ -1,7 +1,12 @@
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
+
+echo "przed ibusem" >> ~/.logzxprofile
+
 ibus-daemon -drx
+
+echo "po ibusie" >> ~/.logzxprofile
 
 xsetroot -fg "#444" -bg "#555" -mod 4 4
 # xflux -l 53.02 -g 18.60 -r 1 &
@@ -20,6 +25,8 @@ pasystray &
 # solaar &
 #conky &
 [ -z "$PICKED_SESSION" ] && PICKED_SESSION="$XDG_SESSION_DESKTOP"
+[ "$PICKED_SESSION" == "none+cwm" ] && PICKED_SESSION="cwm"
+echo "a picked_session jest ~$PICKED_SESSION~" >> ~/.logzxprofile
 [ "$PICKED_SESSION" == "cwm" ] && tint2 &
 
 export COLORTERM=urxvtc
@@ -27,7 +34,10 @@ export TERMINAL=urxvtc
 
 xscreensaver -no-splash &
 xss-lock -- xscreensaver-command -lock &
+
+echo "przed ultranav" >> ~/.logzxprofile
 /home/mf/dotfiles/ultranav.sh
+echo "po ultranav" >> ~/.logzxprofile
 
 xmodmap -e 'keycode 166=Prior'
 xmodmap -e 'keycode 167=Next'
@@ -37,5 +47,7 @@ setxkbmap -option caps:ctrl_modifier
 setxkbmap -option compose:menu
 
 urxvtd -f
+
+echo "koniec" >> ~/.logzxprofile
 
 # vim:ft=sh
