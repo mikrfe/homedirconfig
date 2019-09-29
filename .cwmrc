@@ -228,10 +228,9 @@ bind-key 4-space window-group
 bind-mouse 4-2 window-stick
 unbind-mouse M-2
 
-unbind-mouse 1
-unbind-mouse 2
-unbind-mouse 3
-
+# unbind-mouse 1
+# unbind-mouse 2
+# unbind-mouse 3
 bind-mouse 1 menu-cmd
 bind-mouse 2 menu-window
 bind-mouse 3 menu-group
