@@ -16,6 +16,10 @@
 /dotfiles/
 /dane/
 
+/Desktop/
+/Documents/
+/instalki/
+
 /Downloads/
 
 /Mail*/
@@ -44,6 +48,12 @@
 /.vim/plugged/
 
 /.mysql_history
+/.sqlite_history
+
+/.xsession-errors
+/.xsession-errors.old
+/.xsession-x2go-lts-errors
+/.xsession-x2go-lts-errors.old
 
 /.wget-hsts
 
