@@ -12,7 +12,7 @@ XTerm*font: -misc-fixed-medium-r-normal--15-140-75-75-c-90-iso10646-1
 Rxvt*scrollBar:                False
 Rxvt*internalBorder:           0
 Rxvt*termName:                 rxvt-unicode-256color
-Rxvt*urlLauncher:              chromium
+Rxvt*urlLauncher:              midori -p
 Rxvt*saveLines: 10000
 Rxvt*jumpScroll: True
 Rxvt*secondaryScroll: False
