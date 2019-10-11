@@ -1,0 +1,87 @@
+!Rxvt*font: xft:Input\ Mono:pixelsize=15
+!Rxvt*font: -misc-fixed-medium-r-normal--15-140-75-75-c-90-iso10646-1
+!Rxvt*font: -misc-fixed-medium-r-normal--18-120-100-100-c-90-iso10646-1
+!Rxvt*font: -misc-fixed-medium-r-normal--20-200-75-75-c-100-iso10646-1
+Rxvt*font: -xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
+Rxvt*scrollBar:                False
+Rxvt*internalBorder:           0
+Rxvt*termName:                 rxvt-unicode-256color
+Rxvt*urlLauncher:              chromium
+Rxvt*saveLines: 10000
+Rxvt*jumpScroll: True
+Rxvt*secondaryScroll: False
+
+XTerm*font: -xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
+
+*background: #000000
+*foreground: #CCCCCC
+!*foreground: #FFCF00
+
+! --- ~/.Xresources ------------------------------------------------------------
+! ------------------------------------------------------------------------------
+! --- generated with 4bit Terminal Color Scheme Designer -----------------------
+! ------------------------------------------------------------------------------
+! --- http://ciembor.github.com/4bit -------------------------------------------
+! ------------------------------------------------------------------------------
+! --- standard colors ---
+! black
+!*color0: #000000
+! bright_black
+!*color8: #2d2d2d
+! red
+!*color1: #c01e1b
+! bright_red
+!*color9: #f8cbcb
+! green
+!*color2: #1bc01e
+! bright_green
+!*color10: #cbf8cb
+! yellow
+!*color3: #bdc01b
+! bright_yellow
+!*color11: #f7f8cb
+! blue
+!*color4: #1e1bc0
+! bright_blue
+!*color12: #cbcbf8
+! magenta
+!*color5: #c01bbd
+! bright_magenta
+!*color13: #f8cbf7
+! cyan
+!*color6: #1bbdc0
+! bright_cyan
+!*color14: #cbf7f8
+! white
+!*color7: #ffffff
+! bright_white
+!*color15: #ffffff
+
+! ------------------------------------------------------------------------------
+! --- end of terminal colors section -------------------------------------------
+! ------------------------------------------------------------------------------
+
+!! Greenish theme - Dark
+!!*color0:       #000000
+!!*color8:       #666666
+!! DarkRed + Red
+!!*color1:       #b45151
+!!*color9:       #fe8686
+!! DarkGreen + Green
+!!*color2:       #8ba574
+!!*color10:      #a5dca5
+!! DarkYellow + Yellow
+!!*color3:       Khaki3
+!!*color11:      #efe58b
+!! DarkBlue + Blue
+!!*color4:       #2797d8
+!!*color12:      #86cdea
+!! DarkMagenta + Magenta
+!!*color5:       #aa6eaf
+!!*color13:      #b698b8
+!!DarkCyan + Cyan
+!!*color6:       #418179
+!!*color14:      #71bebe
+!! LightGrey + White
+!!*color7:       #bebebe
+!!*color15:      #ffffff
