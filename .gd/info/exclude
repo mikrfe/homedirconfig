@@ -55,6 +55,9 @@
 /.xsession-x2go-lts-errors
 /.xsession-x2go-lts-errors.old
 
+/.Xauthority
+/.ICEauthority
+
 /.wget-hsts
 
 /.jdk/
