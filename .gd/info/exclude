@@ -55,6 +55,7 @@
 /.linuxbrew/
 
 /.procmailrc
+/.forward
 
 /.composer/
 
