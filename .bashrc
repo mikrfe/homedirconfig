@@ -1,7 +1,5 @@
 # ~/.bashrc
 
-source /etc/bash.bashrc
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -57,8 +55,6 @@ gpg-connect-agent updatestartuptty /bye >/dev/null
 
 # added by travis gem
 #[ -f /home/mf/.travis/travis.sh ] && source /home/mf/.travis/travis.sh
-
-. /home/mf/.nix-profile/etc/profile.d/nix.sh
 
 # The next line updates PATH for Netlify's Git Credential Helper.
 if [ -f '/home/mf/.netlify/helper/path.bash.inc' ]; then source '/home/mf/.netlify/helper/path.bash.inc'; fi
