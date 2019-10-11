@@ -231,8 +231,9 @@ unbind-mouse M-2
 # unbind-mouse 1
 # unbind-mouse 2
 # unbind-mouse 3
-bind-mouse 1 menu-cmd
-bind-mouse 2 menu-window
-bind-mouse 3 menu-group
+
+# bind-mouse 1 menu-cmd
+# bind-mouse 2 menu-window
+# bind-mouse 3 menu-group
 
 # vim:ft=config
