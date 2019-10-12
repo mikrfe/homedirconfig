@@ -17,6 +17,7 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
 fi
 debian_chroot_ps1_prefix="${debian_chroot:+($debian_chroot)}"
 PS1='• ${debian_chroot_ps1_prefix}\h § \W ¶ '
+source ~/.bash_prompt.sh
 
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
