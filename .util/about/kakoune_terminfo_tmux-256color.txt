@@ -1,0 +1,8 @@
+as per :doc faq
+
+tic /path/to/source/code/of/kakoune/contrib/tmux-256color.terminfo
+
+  ( this acts on the
+set -g default-terminal tmux-256color
+set -ga terminal-overrides ",col:Tc"
+    in .tmux.conf )
