@@ -28,9 +28,11 @@ fi
 export GIT_PAGER='less -R'
 export EDITOR='kak'
 
-alias ll='ls -l'
-alias la='ls -A'
+alias lsl='ls -l'
+alias ll='lsl'
+alias lsa='ls -A'
 alias l='ls -CF'
+alias la='l -A'
 
 alias gcm='git commit -am'
 alias gcn='git commit -a'
