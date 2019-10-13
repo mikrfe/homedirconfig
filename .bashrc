@@ -16,8 +16,31 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 debian_chroot_ps1_prefix="${debian_chroot:+($debian_chroot)}"
-PS1='• ${debian_chroot_ps1_prefix}\h § \W ¶ '
-source ~/.bash_prompt.sh
+
+declare -A oCoRe=(
+	[RCol]='\[\e[0m\]'
+	[Red]='\[\e[0;31m\]'
+	[Gre]='\[\e[0;32m\]'
+	[BYel]='\[\e[1;33m\]'
+	[BBlu]='\[\e[1;34m\]'
+	[Pur]='\[\e[0;35m\]'
+)
+case "$TERM" in
+    *color ) ;;
+    * ) unset oCoRe ;;
+esac
+
+debian_chroot_ps1_prefix_temp="${debian_chroot_ps1_prefix:+$oCoRe[RCol]$debian_chroot_ps1_prefix}"
+PS1_TEMPLATE="${oCoRe[Red]}\h:${oCoRe[BBlu]}\w${oCoRe[Pur]}¶ ${oCoRe[RCol]}"
+PROMPT_DIRTRIM=3
+PROMPT_COMMAND=__prompt_command
+__prompt_command() {
+	case "$?" in
+		0 ) PS1="${oCoRe[Gre]}•" ;;
+		* ) PS1="${oCoRe[BYel]}¬" ;;
+	esac
+	PS1+="${PS1_TEMPLATE}"
+}
 
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
