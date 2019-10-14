@@ -1,4 +1,21 @@
-[[ $- != *i* ]] && return
+STARTTIMEBASH5="$EPOCHREALTIME"
+< /proc/uptime builtin read START_PROC_UPTIME
+case "$-" in
+    *i* ) ;;
+    * ) unset START_PROC_UPTIME; unset STARTTIMEBASH5; return ;;
+esac
+STARTTIMEBASH5=(${STARTTIMEBASH5: 0 : -7 } ${STARTTIMEBASH5: -6 : 6 })
+START_PROC_UPTIME=($START_PROC_UPTIME)
+builtin printf -v INVOKETIMEBASH '%(%s)T' -2
+
+< /proc/self/stat builtin read START_PROC_SELF_STAT # no -a because [1] is () delimited and may contain space
+# 1 ([0]) — PID; 22 ([23]) — starttime (jiffies)
+#[[ $START_PROC_SELF_STAT =~ $regex_for_proc_process_stat ]] &&
+#	PROC_SELF_STAT_STARTTIME="${BASH_REMATCH[1]}"
+#PROC_SELF_STAT_STARTTIME=$(echo $START_PROC_SELF_STAT |
+#	sed -rEf $HOME/.util/starttime_from_proc_process_stat.sed)
+PROC_SELF_STAT_STARTTIME="${START_PROC_SELF_STAT##*\)}"
+
 alias s="echo \$?"
 alias d="pwd -L"
 alias p="pwd -P"
