@@ -1,9 +1,11 @@
 STARTTIMEBASH5="$EPOCHREALTIME"
 < /proc/uptime builtin read START_PROC_UPTIME
 case "$-" in
-    *i* ) source "$HOME/.util/further.bash" ;;
+    *i* ) ;;
     * ) unset START_PROC_UPTIME; unset STARTTIMEBASH5; return ;;
 esac
+>&2 echo "hello from bashrc"
+source "$HOME/.util/further.bash"
 STARTTIMEBASH5=(${STARTTIMEBASH5: 0 : -7 } ${STARTTIMEBASH5: -6 : 6 })
 START_PROC_UPTIME=($START_PROC_UPTIME)
 builtin printf -v INVOKETIMEBASH '%(%s)T' -2
