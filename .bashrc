@@ -1,7 +1,7 @@
 STARTTIMEBASH5="$EPOCHREALTIME"
 < /proc/uptime builtin read START_PROC_UPTIME
 case "$-" in
-    *i* ) ;;
+    *i* ) source "$HOME/.util/further.bash" ;;
     * ) unset START_PROC_UPTIME; unset STARTTIMEBASH5; return ;;
 esac
 STARTTIMEBASH5=(${STARTTIMEBASH5: 0 : -7 } ${STARTTIMEBASH5: -6 : 6 })
