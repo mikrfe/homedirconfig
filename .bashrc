@@ -10,11 +10,9 @@ builtin printf -v INVOKETIMEBASH '%(%s)T' -2
 
 < /proc/self/stat builtin read START_PROC_SELF_STAT # no -a because [1] is () delimited and may contain space
 # 1 ([0]) — PID; 22 ([23]) — starttime (jiffies)
-#[[ $START_PROC_SELF_STAT =~ $regex_for_proc_process_stat ]] &&
-#	PROC_SELF_STAT_STARTTIME="${BASH_REMATCH[1]}"
-#PROC_SELF_STAT_STARTTIME=$(echo $START_PROC_SELF_STAT |
-#	sed -rEf $HOME/.util/starttime_from_proc_process_stat.sed)
 PROC_SELF_STAT_STARTTIME="${START_PROC_SELF_STAT##*\)}"
+PROC_SELF_STAT_STARTTIME=($PROC_SELF_STAT_STARTTIME)
+PROC_SELF_STAT_STARTTIME="${PROC_SELF_STAT_STARTTIME[19]}"
 
 alias s="echo \$?"
 alias d="pwd -L"
