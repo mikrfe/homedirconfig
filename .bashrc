@@ -5,7 +5,9 @@ case "$-" in
     * ) unset START_PROC_UPTIME; unset STARTTIMEBASH5; return ;;
 esac
 source "$HOME/.util/further.bash"
-STARTTIMEBASH5=(${STARTTIMEBASH5: 0 : -7 } ${STARTTIMEBASH5: -6 : 6 })
+if [[ "${BASH_VERSINFO:-0}" -ge 5 ]]; then
+	STARTTIMEBASH5=(${STARTTIMEBASH5: 0 : -7 } ${STARTTIMEBASH5: -6 : 6 })
+fi
 START_PROC_UPTIME=($START_PROC_UPTIME)
 builtin printf -v INVOKETIMEBASH '%(%s)T' -2
 
@@ -42,7 +44,7 @@ declare -A oCoRe=(
 	[Pur]='\[\e[0;35m\]'
 )
 case "$TERM" in
-    *color ) ;;
+    xterm | *color ) ;;
     * ) unset oCoRe ;;
 esac
 
