@@ -5,7 +5,7 @@ then
     >&2 echo "Now it's Bash $BASH (version $BASH_VERSINFO)."
 elif [[ $BASH != $FURTHER_BASH ]]
 then
-    >&2 echo "Swapping Bash $BASH (version $BASH_VERSINFO) for $FURTHER_BASH …" 
+    >&2 echo "Swapping Bash $BASH (version $BASH_VERSINFO) for $FURTHER_BASH …"
     exec $FURTHER_BASH "$@"  # exec might be a bad idea
 else
     unset FURTHER_BASH
