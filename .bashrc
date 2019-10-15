@@ -4,7 +4,6 @@ case "$-" in
     *i* ) ;;
     * ) unset START_PROC_UPTIME; unset STARTTIMEBASH5; return ;;
 esac
->&2 echo "hello from bashrc"
 source "$HOME/.util/further.bash"
 STARTTIMEBASH5=(${STARTTIMEBASH5: 0 : -7 } ${STARTTIMEBASH5: -6 : 6 })
 START_PROC_UPTIME=($START_PROC_UPTIME)
