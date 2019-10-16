@@ -10,3 +10,12 @@ function gd {
 }
 function ls { get-childitem @args }
 function lsa { get-childitem -attributes hidden,!hidden @args }
+$ESC = [char]27
+$oCoRe = @{
+	RCol = "$ESC[0m"
+	Red = "$ESC[0;31m"
+	Gre = "$ESC[0;32m"
+	BYel = "$ESC[1;33m"
+	BBlu = "$ESC[1;34m"
+	Pur = "$ESC[0;35m"
+}
