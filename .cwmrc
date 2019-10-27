@@ -12,6 +12,9 @@ color groupborder "#1f1"
 color ungroupborder "#f1a"
 color urgencyborder "#fa1"
 
+bind-key C4MS-r restart
+bind-key C4MS-q quit
+
 bind-key Print "$HOME/dotfiles/screenshoting.sh fullwithclip"
 bind-key 4-p "scrot"
 bind-key C-Print "$HOME/dotfiles/screenshoting.sh fullnoclip"
@@ -47,10 +50,10 @@ bind-key 4-Return urxvtc
 bind-key 4S-Return "urxvtc kak"
 bind-key C-Return urxvtc
 
-command lock "xscreensaver-command -lock"
+command lock "xlock"
 
-bind-key XF86Launch1 "xscreensaver-command -lock"
-bind-key C4M-l "xscreensaver-command -lock"
+bind-key XF86Launch1 lock
+bind-key C4M-l lock
 
 bind-key C4S-d "rofi -show run"
 bind-key CMS4-d "rofi -show window"
