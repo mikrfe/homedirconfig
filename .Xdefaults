@@ -1,3 +1,6 @@
+XLock.startCmd: xset s blank s 180 0 dpms 1 5 10
+XLock.endCmd: xset s off dpms 0 0 0
+
 ! === Nice terminal fonts: 
 ! 
 !   xft:Input\ Mono:pixelsize=15
