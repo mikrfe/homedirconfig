@@ -2,7 +2,7 @@ export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 
-ibus-daemon -drx
+# ibus-daemon -drx
 
 xset m 3/2 16 &
 
