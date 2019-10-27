@@ -27,8 +27,7 @@ xset m 3/2 16 &
 	# dunst & #notification daemon - test with: notify-send --icon=gtk-info Test "This is a test"
 	/usr/lib/xfce4/notifyd/xfce4-notifyd &
 
-	xscreensaver -no-splash &
-	xss-lock -- xscreensaver-command -lock &
+	xss-lock -- xlock &
 	
 	[ "$PICKED_SESSION" == "none+cwm" ] && PICKED_SESSION="cwm"
 	
