@@ -35,6 +35,8 @@ shopt -s extglob
 # make history work for you
 shopt -s histverify histreedit
 
+source "$HOME/.util/bindings.bash"
+
 declare -A oCoRe=(
         [RCol]='\[\e[0m\]'
         [Red]='\[\e[0;31m\]'
