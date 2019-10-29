@@ -1,0 +1,26 @@
+[user]
+	email = archiet@platinum.edu.pl
+	name = Michał Krzysztof Feiler
+	#signingkey = 880D22D6
+[gpg]
+	program = gpg2
+[github]
+	user = ArchieT
+[commit]
+	gpgsign = false
+[core]
+	pager = less -r
+[tag]
+	gpgsign = false
+[push]
+	default = simple
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+[alias]
+	d = difftool
+	m = mergetool
+	c = commit -S -am
+	logs = log --show-signature
+	cis = commit -S
