@@ -52,7 +52,7 @@ esac
 debian_chroot_ps1_prefix_temp="${debian_chroot_ps1_prefix:+$oCoRe[RCol]$debian_chroot_ps1_prefix}"
 PS1_TEMPLATE="${oCoRe[Red]}\h:${oCoRe[BBlu]}\w${oCoRe[Pur]}¶ ${oCoRe[RCol]}"
 PROMPT_DIRTRIM=3
-PROMPT_COMMAND=__prompt_command
+PROMPT_COMMAND='history -a; __prompt_command'
 __prompt_command() {
 	case "$?" in
 		0 ) PS1="${oCoRe[Gre]}•" ;;
