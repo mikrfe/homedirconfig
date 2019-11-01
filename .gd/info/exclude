@@ -9,6 +9,8 @@
 !/.gd/info/
 !/.gd/info/exclude
 
+/.Xauthority
+
 /prv/
 /pub/
 /public_html/
