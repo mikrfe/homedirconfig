@@ -1,0 +1,14 @@
+hook global WinCreate [^*]* %{
+    editorconfig-load
+}
+
+# eval %sh{kak-lsp --kakoune -s $kak_session}
+# #hook global WinSetOption filetype=(rust|python|go|javascript|typescript|c|cpp) %{
+# #        lsp-enable-window
+# #}
+# lsp-enable
+# hook global WinSetOption filetype=rust %{
+#         hook window BufWritePre .* lsp-formatting-sync
+# }
+add-highlighter global/ number-lines
+plug https://github.com/whereswaldon/shellcheck.kak
