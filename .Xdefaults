@@ -1,6 +1,11 @@
-XLock.startCmd: xset s blank s 180 0 dpms 1 5 10
+XLock.startCmd: xset s blank s 180 0 dpms 5 7 10
 XLock.endCmd: xset s off dpms 0 0 0
+XLock.dpmsstandby: 5
+XLock.dpmssuspend: 5
+XLock.dpmsoff: 5
 XLock.mode: dclock
+XLock.echokeys: True
+XLock.echokey: =
 
 ! === Nice terminal fonts: 
 ! 
