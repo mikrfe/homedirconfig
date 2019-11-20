@@ -20,6 +20,11 @@ XLock.echokey: =
 Rxvt*font: -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso10646-1
 XTerm*font: -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso10646-1
 
+XTerm*termName:                xterm-256color
+XTerm*internalBorder:          6
+XTerm*saveLines:               10000
+XTerm*jumpScroll:              True
+
 Rxvt*scrollBar:                False
 Rxvt*internalBorder:           0
 Rxvt*termName:                 rxvt-unicode-256color
