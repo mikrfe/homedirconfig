@@ -44,11 +44,11 @@ bind-key XF86Eject "eject -T"
 
 fontname "-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1"
 
-command term urxvtc
+command term xterm
 
-bind-key 4-Return urxvtc
-bind-key 4S-Return "urxvtc kak"
-bind-key C-Return urxvtc
+bind-key 4-Return xterm
+bind-key 4S-Return "xterm kak"
+bind-key C-Return xterm
 
 command lock "xlock"
 
