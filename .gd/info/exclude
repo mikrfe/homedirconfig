@@ -80,3 +80,6 @@
 /.sudo_as_admin_successful
 /.x2go
 /.xsession-x2go-mis-errors
+/.fvwm/.FvwmConsole-History
+/.lesshst
+/.xsession-x2go-mis-errors.old
