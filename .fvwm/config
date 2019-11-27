@@ -147,39 +147,21 @@ AddToFunc   ChangeDesk
 # 2: Styles #
 #############
 
-# Desktops and Pages
-#
-# Fvwm has both Virtual Desktops and Pages. Each Desktop is built from
-# a grid of Pages. The following sets the name of four Desktops and then
-# divides each Desktop into a 2x2 grid of Pages that are positioned as
-#
-#   +---+---+
-#   |   |   |
-#   +---+---+
-#   |   |   |
-#   +---+---+
-#
 DesktopName 0 Main
 DesktopName 1 Desk1
 DesktopName 2 Desk2
 DesktopName 3 Desk3
-DesktopSize 2x2
+DesktopSize 1x1
 
-# EdgeScroll will move the view port between the Pages when the mouse
-# moves to the edge of the screen. This set the amount of distance to
-# scroll at 100% (full page) and the EdgeResistance which is a timer
-# for how long the mouse as at the edge before it scrolls.
-#
-# Set EdgeScroll 0 0 and/or EdgeResistance -1 to disable.
-EdgeScroll 100 100
-EdgeResistance 450
-EdgeThickness 1
-Style * EdgeMoveDelay 350, EdgeMoveResistance 350
+EdgeScroll 0 0
+EdgeResistance -1
+EdgeThickness 0
+# Style * EdgeMoveDelay 350, EdgeMoveResistance 350
 
 # EwmhBaseStruts [left] [right] [top] [bottom]
 # Reserves space along the edge(s) of the Screen that will not
 # be covered when maximizing or placing windows.
-EwmhBaseStruts 0 120 0 0
+EwmhBaseStruts 0 0 0 0
 
 # This sets the ClickTime and MoveThreshold used to determine
 # Double Clicks, Hold and Move for the mouse.
