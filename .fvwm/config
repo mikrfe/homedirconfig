@@ -136,11 +136,7 @@ AddToFunc   ToggleTitle
 # This function is called by FvwmEvent every time the Desk is changed.
 DestroyFunc ChangeDesk
 AddToFunc   ChangeDesk
-+ I SendToModule FvwmButtons ChangeButton desk0 Colorset 10
-+ I SendToModule FvwmButtons ChangeButton desk1 Colorset 10
-+ I SendToModule FvwmButtons ChangeButton desk2 Colorset 10
-+ I SendToModule FvwmButtons ChangeButton desk3 Colorset 10
-+ I SendToModule FvwmButtons ChangeButton desk$0 Colorset 11
++ I SendToModule FvwmButtons ChangeButton desknum Title $0
 
 
 #############
@@ -169,7 +165,7 @@ DesktopName 6 Desk6
 DesktopName 7 Desk7
 DesktopName 8 Desk8
 DesktopName 9 Desk9
-DesktopSize 3x1
+DesktopSize 3x2
 
 # EdgeScroll will move the view port between the Pages when the mouse
 # moves to the edge of the screen. This set the amount of distance to
@@ -462,12 +458,31 @@ AddToMenu   MenuFvwmManPages "Help" Title
 # Silent supresses any errors (such as keyboards with no Menu key).
 Silent Key F1 A M Menu MenuFvwmRoot
 Silent Key Menu A A Menu MenuFvwmRoot
-Silent Key Tab A M WindowList Root c c NoDeskSort, SelectOnRelease Meta_L
-Silent Key F1 A C GotoDesk 0 0
+Silent Key F1 A 4 Menu MenuFvwmRoot
+Silent Key Tab A M WindowList Root c c NoDeskSort, IconifiedAtEnd, SelectOnRelease Meta_L
+Silent Key Tab A 4 WindowList Root c c IconifiedAtEnd, SelectOnRelease Super_L
+Silent Key 0 A 4 GotoDesk 0 0
+Silent Key 1 A 4 GotoDesk 0 1
+Silent Key 2 A 4 GotoDesk 0 2
+Silent Key 3 A 4 GotoDesk 0 3
+Silent Key 4 A 4 GotoDesk 0 4
+Silent Key 5 A 4 GotoDesk 0 5
+Silent Key 6 A 4 GotoDesk 0 6
+Silent Key 7 A 4 GotoDesk 0 7
+Silent Key 8 A 4 GotoDesk 0 8
+Silent Key 9 A 4 GotoDesk 0 9
+Silent Key Grave A 4 GotoDesk 0 0
 Silent Key F2 A C GotoDesk 0 1
 Silent Key F3 A C GotoDesk 0 2
 Silent Key F4 A C GotoDesk 0 3
-Silent Key Super_R A A Exec exec $[infostore.terminal]
+Silent Key Return A 4 Exec exec $[infostore.terminal]
+Silent Key j A 4 GotoPage -1p +0p, wrapx, wrapy
+Silent Key k A 4 GotoPage +1p +0p, wrapx, wrapy
+Silent Key l A 4 GotoPage +0p +1p, wrapx, wrapy
+Silent Key l A 4S GotoPage +1p +1p, wrapx, wrapyk
+
+Silent Key q W 4S Close
+Mouse 2 I A Close
 
 # Window Buttons: [1 3 5 7 9  TTTTT  0 8 6 4 2]
 #   1 - Open the WindowOps menu.
@@ -580,14 +595,9 @@ DestroyModuleConfig RightPanel:*
 *RightPanel: Columns 120
 *RightPanel: Frame 0
 *RightPanel: Font "xft:Sans:Bold:size=10:antialias=True"
-*RightPanel: (120x45, Icon "fvwm-logo-small.png", Frame 0)
-*RightPanel: (120x5, Frame 0)
-*RightPanel: (10x20, Frame 0)
-*RightPanel: (25x20, Id desk0, Title "0", Action (Mouse 1) GotoDesk 0 0, Colorset 11, ActiveColorset 12, Frame 0)
-*RightPanel: (25x20, Id desk1, Title "1", Action (Mouse 1) GotoDesk 0 1, ActiveColorset 12, Frame 0)
-*RightPanel: (25x20, Id desk2, Title "2", Action (Mouse 1) GotoDesk 0 2, ActiveColorset 12, Frame 0)
-*RightPanel: (25x20, Id desk3, Title "3", Action (Mouse 1) GotoDesk 0 3, ActiveColorset 12, Frame 0)
-*RightPanel: (10x20, Frame 0)
+*RightPanel: (35x20, Frame 0)
+*RightPanel: (50x20, Id desknum, Title "oof")
+*RightPanel: (35x20, Frame 0)
 *RightPanel: (5x80, Frame 0)
 *RightPanel: (110x80, Swallow FvwmPager 'Module FvwmPager *', Frame 0)
 *RightPanel: (5x80, Frame 0)
@@ -595,9 +605,9 @@ DestroyModuleConfig RightPanel:*
 Test (x stalonetray) *RightPanel: (120x20, Swallow(NoClose,UseOld) \
     stalonetray 'Exec exec stalonetray --config \
     "$[FVWM_DATADIR]/default-config/.stalonetrayrc"', Frame 0)
-Test (x stalonetray) PipeRead 'echo "*RightPanel: (120x$(($[vp.height]-225)), \
+Test (x stalonetray) PipeRead 'echo "*RightPanel: (120x$(($[vp.height]-175)), \
     Top, Swallow FvwmIconMan \'Module FvwmIconMan\', Frame 0)"'
-Test (!x stalonetray) PipeRead 'echo "*RightPanel: (120x$(($[vp.height]-205)),\
+Test (!x stalonetray) PipeRead 'echo "*RightPanel: (120x$(($[vp.height]-155)),\
     Top, Swallow FvwmIconMan \'Module FvwmIconMan\', Frame 0)"'
 *RightPanel: (120x45, Swallow DateTime 'Module FvwmScript FvwmScript-DateTime',\
     Frame 0)
