@@ -481,6 +481,7 @@ Silent Key k A 4 GotoPage +1p +0p, wrapx, wrapy
 Silent Key l A 4 GotoPage +0p +1p, wrapx, wrapy
 Silent Key l A 4S GotoPage +1p +1p, wrapx, wrapyk
 
+Silent Key Semicolon W 4 Maximize 100 100
 Silent Key q W 4S Close
 Mouse 2 I N Close #dont work
 Mouse 3 I C Close #dont work
