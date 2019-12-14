@@ -179,13 +179,13 @@ DesktopSize 3x1
 # Set EdgeScroll 0 0 and/or EdgeResistance -1 to disable.
 EdgeScroll 0 0
 EdgeResistance -1
-EdgeThickness 0
+EdgeThickness 1
 Style * EdgeMoveDelay 350, EdgeMoveResistance 350
 
 # EwmhBaseStruts [left] [right] [top] [bottom]
 # Reserves space along the edge(s) of the Screen that will not
 # be covered when maximizing or placing windows.
-EwmhBaseStruts 0 18 0 0
+EwmhBaseStruts 0 120 0 0
 
 # This sets the ClickTime and MoveThreshold used to determine
 # Double Clicks, Hold and Move for the mouse.
