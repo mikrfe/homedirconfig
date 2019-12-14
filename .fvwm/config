@@ -482,7 +482,9 @@ Silent Key l A 4 GotoPage +0p +1p, wrapx, wrapy
 Silent Key l A 4S GotoPage +1p +1p, wrapx, wrapyk
 
 Silent Key q W 4S Close
-Mouse 2 I A Close
+Mouse 2 I N Close #dont work
+Mouse 3 I C Close #dont work
+Mouse 1 I C Close #dont work
 
 # Window Buttons: [1 3 5 7 9  TTTTT  0 8 6 4 2]
 #   1 - Open the WindowOps menu.
@@ -510,9 +512,9 @@ Mouse 5	T    A WindowShade False
 Mouse 1	R    A Menu MenuFvwmRoot
 Mouse 2	R    A WindowList
 Mouse 3	R    A Menu MenuWindowOpsLong
-Mouse 1	I    A RaiseMoveX Move "Iconify off"
+Mouse 1	I    N RaiseMoveX Move "Iconify off"
 Mouse 3	T    A Menu MenuWindowOps
-Mouse 3 I    A Menu MenuIconOps
+Mouse 3 I    N Menu MenuIconOps
 
 #######
 # 6: Window Decor
