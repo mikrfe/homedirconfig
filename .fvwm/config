@@ -307,11 +307,14 @@ PipeRead "fvwm-menu-desktop -e"
 # lines as this is only to help make this menu portable.
 DestroyMenu MenuPrograms
 AddToMenu   MenuPrograms "Programs" Title
-Test (x chromium) + "Chromium" Exec exec chromium
+Test (x brave) + "Brave" Exec exec brave
+Test (x emacs) + "Emacs" Exec exec emacs
 Test (x firefox) + "Firefox" Exec exec firefox
-Test (x google-chrome) + "Google-Chrome" Exec exec google-chrome
 Test (x gvim) + "gVim" Exec exec gvim
 Test (x xemacs) + "XEmacs" Exec exec xemacs
+Test (x chromium) + "Chromium" Exec exec chromium
+Test (x google-chrome) + "Google-Chrome" Exec exec google-chrome
+Test (x telegram-desktop) + "Telegram Desktop" Exec exec telegram-desktop
 Test (x gimp) + "Gimp" Exec exec gimp
 Test (x vlc) + "VLC" Exec exec vlc
 
@@ -543,6 +546,9 @@ Key l A C4M	    Exec exec xlock
 
 Key d A 4  Exec exec rofi -show run
 Key d A 4S Menu MenuFvwmRoot
+
+Key f A 4 Menu MenuFvwmRoot
+Key s A 4 Menu MenuFvwmRoot
 
 #######
 # 6: Window Decor
