@@ -517,6 +517,33 @@ Mouse 1	I    N RaiseMoveX Move "Iconify off"
 Mouse 3	T    A Menu MenuWindowOps
 Mouse 3 I    N Menu MenuIconOps
 
+Key Print A A  Exec exec scrot -e 'xclip -selection clipboard -t image/png -i $f'
+Key Print A 4  Exec exec scrot -s -e 'xclip -selection clipboard -t image/png -i $f'
+Key Print A C  Exec exec scrot
+Key Print A C4 Exec exec scrot -s
+
+Key XF86MonBrightnessUp A A Exec exec xbacklight -inc 10
+Key XF86MonBrightnessUp A 4 Exec exec xbacklight -inc 5
+Key XF86MonBrightnessUp A M Exec exec xbacklight -inc 1
+Key XF86MonBrightnessUp A C Exec exec xbacklight -inc 15
+Key XF86MonBrightnessUp A S Exec exec xbacklight -inc 25
+Key XF86MonBrightnessDown A A Exec exec xbacklight -dec 10
+Key XF86MonBrightnessDown A 4 Exec exec xbacklight -dec 5
+Key XF86MonBrightnessDown A M Exec exec xbacklight -dec 1
+Key XF86MonBrightnessDown A C Exec exec xbacklight -dec 15
+Key XF86MonBrightnessDown A S Exec exec xbacklight -dec 25
+
+Key XF86AudioRaiseVolume  A A Exec exec pulseaudio-ctl up
+Key XF86AudioLowerVolume  A A Exec exec pulseaudio-ctl down
+Key XF86AudioMute	  A A Exec exec pulseaudio-ctl mute
+Key XF86AudioMicMute	  A A Exec exec pulseaudio-ctl mute-input
+
+Key XF86Launch1 A A Exec exec xlock
+Key l A C4M	    Exec exec xlock
+
+Key d A 4  Exec exec rofi -show run
+Key d A 4S Menu MenuFvwmRoot
+
 #######
 # 6: Window Decor
 #
