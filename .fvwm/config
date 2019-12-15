@@ -62,6 +62,23 @@ AddToFunc   StartFunction
 + I Test (Init) Module FvwmBanner
 + I Module FvwmButtons RightPanel
 + I Module FvwmEvent EventNewDesk
++ I FvwmEvent FvwmEvent-NewWindow
+
+*FvwmEvent-NewWindow: StartDelay 4
+*FvwmEvent-NewWindow: add_window FuncFocusWindow
+
+DestroyFunc FuncFocusWindow
+AddToFunc FuncFocusWindow
++ I Focus
++ I WarpToWindow
+
+DestroyFunc JustMoveX
+AddToFunc JustMoveX
++ M $0
++ D $1
+
+DestroyFunc JustMove
+AddToFunc JustMove M $0
 
 # Mouse Bindings Functions
 DestroyFunc RaiseMoveX
@@ -519,6 +536,9 @@ Mouse 3	R    A Menu MenuWindowOpsLong
 Mouse 1	I    N RaiseMoveX Move "Iconify off"
 Mouse 3	T    A Menu MenuWindowOps
 Mouse 3 I    N Menu MenuIconOps
+
+Mouse 3 W    4 JustMoveX Move Maximize
+Mouse 1 W    4 JustMoveX Resize Maximize
 
 Key Print A A  Exec exec scrot -e 'xclip -selection clipboard -t image/png -i $f'
 Key Print A 4  Exec exec scrot -s -e 'xclip -selection clipboard -t image/png -i $f'
