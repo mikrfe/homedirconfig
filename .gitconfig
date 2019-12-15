@@ -16,6 +16,7 @@
 	default = simple
 [diff]
 	tool = gvimdiff
+	submodule = log
 [merge]
 	tool = gvimdiff
 [alias]
@@ -35,3 +36,5 @@
 # This next lines include Netlify's Git Credential Helper configuration in your Git configuration.
 [include]
   path = /home/mf/.netlify/helper/git-config
+[status]
+	submodulesummary = 1
