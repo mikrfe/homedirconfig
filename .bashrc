@@ -52,12 +52,13 @@ esac
 
 PS1_TEMPLATE="${oCoRe[Red]}\h:${oCoRe[BBlu]}\w${oCoRe[Pur]}¶ ${oCoRe[RCol]}"
 PROMPT_DIRTRIM=3
-PROMPT_COMMAND='history -a; __prompt_command'
+PROMPT_COMMAND=__prompt_command
 __prompt_command() {
         case "$?" in
                 0 ) PS1="${oCoRe[Gre]}•" ;;
                 * ) PS1="${oCoRe[BYel]}¬" ;;
         esac
+        history -a
         PS1+="${PS1_TEMPLATE}"
 }
 
