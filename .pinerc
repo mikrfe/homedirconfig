@@ -71,7 +71,14 @@ signature-file=
 # List of features; see Alpine's Setup/options menu for the current set.
 # e.g. feature-list= select-without-confirm, signature-at-bottom
 # Default condition for all of the features is no-.
-feature-list=enable-incoming-folders
+feature-list=enable-incoming-folders,
+	no-expanded-view-of-folders,
+	combined-folder-display,
+	combined-subdirectory-display,
+	enable-suspend,
+	preopen-stayopen-folders,
+	check-newmail-when-quitting,
+	enable-incoming-folders-checking
 
 # Alpine executes these keys upon startup (e.g. to view msg 13: i,j,1,3,CR,v)
 initial-keystroke-list=
@@ -107,7 +114,7 @@ fcc-name-rule=
 # Sets presentation order of messages in Index. Choices:
 # Subject, From, Arrival, Date, Size, To, Cc, OrderedSubj, Score, and Thread.
 # Order may be reversed by appending /Reverse. Default: "Arrival".
-sort-key=
+sort-key=Arrival/Reverse
 
 # Sets presentation order of address book entries. Choices: dont-sort,
 # fullname-with-lists-last, fullname, nickname-with-lists-last, nickname
@@ -316,7 +323,16 @@ default-directories=
 max-remote-connections=
 
 # A list of folders that should be left open once opened (INBOX is implicit)
-stay-open-folders=
+stay-open-folders=mikf-INBOX,
+	archietpl-INBOX,
+	mikrfe-INBOX,
+	plat-INBOX,
+	mensa-INBOX,
+	wmi-INBOX,
+	gmail-INBOX,
+	st_amu-INBOX,
+	outlook-INBOX,
+	matumk-INBOX
 
 # Sets the time in seconds that Alpine will attempt to open a network
 # connection when checking for new unseen messages in an incoming folder.
@@ -498,7 +514,7 @@ personal-print-command=
 personal-print-category=
 
 # Patterns and their actions are stored here.
-patterns-roles=
+patterns-roles=LIT:pattern="/NICK=mikf-send/FLDTYPE=SPEC/FOLDER=mikf-INBOX" action="/ROLE=1/FROM=Michał Krzysztof Feiler <m@mikf.pl>/SMTP=mail.lunanode.net\/ssl\/user=m@mikf.pl/RTYPE=YES/FTYPE=YES/CTYPE=YES"
 
 # Patterns and their actions are stored here.
 patterns-filters2=
