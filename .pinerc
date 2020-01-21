@@ -104,12 +104,12 @@ quote-suppression-threshold=
 # Determines default folder name for Saves...
 # Choices: default-folder, by-sender, by-from, by-recipient, last-folder-used.
 # Default: "default-folder", i.e. "saved-messages" (Unix) or "SAVEMAIL" (PC).
-saved-msg-name-rule=
+saved-msg-name-rule=last-folder-used
 
 # Determines default name for Fcc...
 # Choices: default-fcc, by-recipient, last-fcc-used.
 # Default: "default-fcc" (see also "default-fcc=" variable.)
-fcc-name-rule=
+fcc-name-rule=current-folder
 
 # Sets presentation order of messages in Index. Choices:
 # Subject, From, Arrival, Date, Size, To, Cc, OrderedSubj, Score, and Thread.
@@ -127,7 +127,7 @@ addrbook-sort-rule=
 folder-sort-rule=
 
 # Sets the default folder and collection offered at the Goto Command's prompt.
-goto-default-rule=
+goto-default-rule=most-recent-folder
 
 # Sets message which cursor begins on. Choices: first-unseen, first-recent,
 # first-important, first-important-or-unseen, first-important-or-recent,
@@ -314,7 +314,7 @@ mailcap-search-path=
 mimetype-search-path=
 
 # List of programs to open Internet URLs (e.g. http or ftp references).
-url-viewers=
+url-viewers=/run/current-system/sw/bin/brave
 
 # List of directories that are preferred locations to save or export attachments.
 default-directories=
@@ -352,7 +352,7 @@ incoming-check-interval-secondary=
 incoming-check-list=
 
 # Specifies the number of dead letter files to keep when canceling.
-dead-letter-files=
+dead-letter-files=9
 
 # Sets the filename for the newmail fifo (named pipe). Unix only.
 newmail-fifo-path=
