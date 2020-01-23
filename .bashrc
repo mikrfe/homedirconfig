@@ -22,7 +22,7 @@ PROC_SELF_STAT_STARTTIME="${PROC_SELF_STAT_STARTTIME[19]}"
 alias s="echo \$?"
 alias d="pwd -L"
 alias p="pwd -P"
-alias gd='GIT_WORK_TREE="$HOME" GIT_DIR="$HOME/.gd" git'
+alias gd='GIT_WORK_TREE="$HOME" GIT_DIR="$HOME/.gd" GIT_CONFIG="$HOME/.gdconfig" git'
 HISTCONTROL=ignoreboth
 shopt -s histappend
 HISTSIZE=50000
