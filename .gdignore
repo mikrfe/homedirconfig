@@ -5,9 +5,7 @@
 # *.[oa]
 *~
 
-/.gd/**
-!/.gd/info/
-!/.gd/info/exclude
+/.gd/
 
 /.Xauthority
 
