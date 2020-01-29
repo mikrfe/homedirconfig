@@ -5,9 +5,9 @@
 # *.[oa]
 *~
 
-/.gd/**
-!/.gd/info/
-!/.gd/info/exclude
+/.gd/
+
+/.Xauthority
 
 /prv/
 /pub/
@@ -17,6 +17,9 @@
 /.local/gopath/
 /dotfiles/
 /dane/
+
+/Downloads/
+/telegramdesktophere/
 
 /nobackup
 /Mail*/
@@ -52,7 +55,6 @@
 
 # temporary
 /.muttrc
-/.pinerc
 /.linuxbrew/
 
 /.procmailrc

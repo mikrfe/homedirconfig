@@ -1,11 +1,11 @@
 [user]
-	email = archiet@platinum.edu.pl
+	email = m@mikf.pl
 	name = Michał Krzysztof Feiler
-	#signingkey = 880D22D6
+	signingkey = 1E369940CC7E01C4CFE8F20AE35C2D7C2C6AC724
 [gpg]
 	program = gpg2
 [github]
-	user = ArchieT
+	user = mkf
 [commit]
 	gpgsign = false
 [core]
@@ -16,6 +16,7 @@
 	default = simple
 [diff]
 	tool = vimdiff
+	submodule = log
 [merge]
 	tool = vimdiff
 [alias]
@@ -24,3 +25,5 @@
 	c = commit -S -am
 	logs = log --show-signature
 	cis = commit -S
+[status]
+	submodulesummary = 1
