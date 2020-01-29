@@ -9,6 +9,8 @@ Plug 'dense-analysis/ale'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
+Plug 'jceb/vim-orgmode'
+
 call plug#end()
 filetype plugin indent on
 
