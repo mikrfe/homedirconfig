@@ -1,2 +1,4 @@
-#text/html;                      w3m -I %{charset} -T text/html %s; nametemplate=%s.html
-text/html;                      links -force-html %s; nametemplate=%s.html
+text/html;                      w3m -I %{charset} -T text/html; copiousoutput
+text/html;                      w3m -I %{charset} -T text/html %s; nametemplate=%s.html
+text/html;                      w3m -I %{charset} -T text/html %s; nametemplate=%s.html; needsterminal
+#text/html;                      links -force-html %s; nametemplate=%s.html
