@@ -45,7 +45,7 @@ default-fcc=
 # Over-rides default path for saved-msg folder, e.g. =saved-messages (using 1st
 # folder collection dir) or ={host2}saved-mail or ="" (to suppress saving).
 # Default: saved-messages (Unix) or SAVEMAIL.MTX (PC) in default collection.
-default-saved-msg-folder=
+default-saved-msg-folder=Archive
 
 # Over-rides default path for postponed messages folder, e.g. =pm (which uses
 # first folder collection dir) or ={host4}pm (using home dir on host4).
@@ -78,7 +78,8 @@ feature-list=enable-incoming-folders,
 	enable-suspend,
 	preopen-stayopen-folders,
 	check-newmail-when-quitting,
-	enable-incoming-folders-checking
+	enable-incoming-folders-checking,
+	prune-uses-yyyy-mm
 
 # Alpine executes these keys upon startup (e.g. to view msg 13: i,j,1,3,CR,v)
 initial-keystroke-list=
@@ -403,7 +404,7 @@ address-book=
 global-address-book=
 
 # Set by Alpine; controls beginning-of-month sent-mail pruning.
-last-time-prune-questioned=120.1
+last-time-prune-questioned=120.3
 
 # Set by Alpine; controls display of "new version" message.
 last-version-used=6.21
