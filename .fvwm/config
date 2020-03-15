@@ -491,7 +491,7 @@ Silent Key 6 A 4 GotoDesk 0 6
 Silent Key 7 A 4 GotoDesk 0 7
 Silent Key 8 A 4 GotoDesk 0 8
 Silent Key 9 A 4 GotoDesk 0 9
-Silent Key Grave A 4 GotoDesk 0 0
+Silent Key abovedot A 4 GotoDesk 0 0
 Silent Key F2 A C GotoDesk 0 1
 Silent Key F3 A C GotoDesk 0 2
 Silent Key F4 A C GotoDesk 0 3
@@ -501,7 +501,7 @@ Silent Key j A 4 GotoPage wrapx +1p +0p
 Silent Key k A 4 GotoPage wrapy +0p +1p wrapx wrapy
 Silent Key l A 4 GotoPage wrapx wrapy +1p +1p
 
-Silent Key Semicolon W 4 Maximize 100 100
+Silent Key lstroke W 4 Maximize 100 100
 Silent Key q W 4S Close
 Mouse 2 I N Close #dont work
 Mouse 3 I C Close #dont work
