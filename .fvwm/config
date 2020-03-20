@@ -492,6 +492,17 @@ Silent Key 7 A 4 GotoDesk 0 7
 Silent Key 8 A 4 GotoDesk 0 8
 Silent Key 9 A 4 GotoDesk 0 9
 Silent Key abovedot A 4 GotoDesk 0 0
+Silent Key 0 A 4S MoveToDesk 0 0
+Silent Key 1 A 4S MoveToDesk 0 1
+Silent Key 2 A 4S MoveToDesk 0 2
+Silent Key 3 A 4S MoveToDesk 0 3
+Silent Key 4 A 4S MoveToDesk 0 4
+Silent Key 5 A 4S MoveToDesk 0 5
+Silent Key 6 A 4S MoveToDesk 0 6
+Silent Key 7 A 4S MoveToDesk 0 7
+Silent Key 8 A 4S MoveToDesk 0 8
+Silent Key 9 A 4S MoveToDesk 0 9
+Silent Key abovedot A 4S MoveToDesk 0 0
 Silent Key F2 A C GotoDesk 0 1
 Silent Key F3 A C GotoDesk 0 2
 Silent Key F4 A C GotoDesk 0 3
