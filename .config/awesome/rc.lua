@@ -248,6 +248,9 @@ awful.screen.connect_for_each_screen(function(s)
         width = 80
     })
 
+    mysystray = wibox.widget.systray()
+    mysystray:set_base_size(24)
+
     -- Add widgets to the wibox
     s.mywibox:setup {
         layout = wibox.layout.align.vertical,
@@ -264,7 +267,7 @@ awful.screen.connect_for_each_screen(function(s)
               color = "#555", top = 1, bottom = 1, left = 1, right = 1,
               mykeyboardlayout
             },
-            wibox.widget.systray(),
+            mysystray,
             mytextclock,
             {
                 layout = wibox.layout.flex.horizontal,
@@ -332,9 +335,9 @@ globalkeys = gears.table.join(
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
-    awful.key({ modkey, "Control" }, "r", awesome.restart,
+    awful.key({ modkey, "Control", "Shift" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
-    awful.key({ modkey, "Shift"   }, "q", awesome.quit,
+    awful.key({ modkey, "Control", "Shift"   }, "e", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
 
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
@@ -381,7 +384,7 @@ globalkeys = gears.table.join(
               end,
               {description = "lua execute prompt", group = "awesome"}),
     -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end,
+    awful.key({ modkey }, "d", function() menubar.show() end,
               {description = "show the menubar", group = "launcher"})
 )
 
@@ -392,7 +395,7 @@ clientkeys = gears.table.join(
             c:raise()
         end,
         {description = "toggle fullscreen", group = "client"}),
-    awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end,
+    awful.key({ modkey, "Shift"   }, "q",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
               {description = "toggle floating", group = "client"}),
