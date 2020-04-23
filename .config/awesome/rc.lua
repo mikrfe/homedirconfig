@@ -14,6 +14,9 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
+
+--local lain = require("lain")
+--local markup = lain.util.markup
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
@@ -107,7 +110,8 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock()
+mytextclock = wibox.widget.textclock(" %a %b %d,\n      %H:%M ")
+mytextclock.font = "DejaVu Sans 10"
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -149,24 +153,31 @@ local tasklist_buttons = gears.table.join(
                                               awful.client.focus.byidx(-1)
                                           end))
 
-local function set_wallpaper(s)
-    -- Wallpaper
-    if beautiful.wallpaper then
-        local wallpaper = beautiful.wallpaper
-        -- If wallpaper is a function, call it with the screen
-        if type(wallpaper) == "function" then
-            wallpaper = wallpaper(s)
-        end
-        gears.wallpaper.maximized(wallpaper, s, true)
-    end
-end
+-- local function set_wallpaper(s)
+--     -- Wallpaper
+--     if beautiful.wallpaper then
+--         local wallpaper = beautiful.wallpaper
+--         -- If wallpaper is a function, call it with the screen
+--         if type(wallpaper) == "function" then
+--             wallpaper = wallpaper(s)
+--         end
+--         gears.wallpaper.maximized(wallpaper, s, true)
+--     end
+-- end
+-- gears.wallpaper.set({
+--   type = "radial",
+--   from = { 50, 50, 10 },
+--   to = { 55, 55, 30 },
+--   stops = { { 0, "#ff0000" }, { 0.5, "#00ff00" }, { 1, "#0000ff" } }
+-- })
+gears.wallpaper.set("#555")
 
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
-screen.connect_signal("property::geometry", set_wallpaper)
+-- screen.connect_signal("property::geometry", set_wallpaper)
 
 awful.screen.connect_for_each_screen(function(s)
     -- Wallpaper
-    set_wallpaper(s)
+    -- set_wallpaper(s)
 
     -- Each screen has its own tag table.
     awful.tag({ "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
@@ -193,6 +204,7 @@ awful.screen.connect_for_each_screen(function(s)
         },
     }
 
+
     -- Create a tasklist widget
     s.mytasklist = awful.widget.tasklist {
         screen  = s,
@@ -210,8 +222,17 @@ awful.screen.connect_for_each_screen(function(s)
               widget = wibox.container.constraint
             },
             {
-              id = "text_role",
-              widget = wibox.widget.textbox
+              {
+                {
+                  id = "text_role",
+                  valign = "bottom", wrap = "word_char",
+                  widget = wibox.widget.textbox
+                },
+                height = 100, heightstrategy = "exact",
+                widget = wibox.container.constraint
+              },
+              top = 1, bottom = 1, color = "#FFF",
+              widget = wibox.container.margin
             },
             layout = wibox.layout.manual
           },
@@ -238,7 +259,11 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.vertical,
-            mykeyboardlayout,
+            {
+              layout = wibox.container.margin,
+              color = "#555", top = 1, bottom = 1, left = 1, right = 1,
+              mykeyboardlayout
+            },
             wibox.widget.systray(),
             mytextclock,
             {
