@@ -489,6 +489,42 @@ for i = 0, 9 do
     )
 end
 
+globalkeys = gears.table.join(globalkeys,
+    awful.key({}, "XF86Launch1", function () awful.spawn("xlock") end,
+        {description = "xlock", group = "useful"}))
+
+brightness_steps = {
+  {n = 10, modi = {}},
+  {n = 5, modi = {modkey}},
+  {n = 1, modi = {"Mod1"}},
+  {n = 15, modi = {"Control"}},
+  {n = 25, modi = {"Shift"}}}
+
+upanddown = {{key = "Down", opt = "dec"}, {key = "Up", opt = "inc"}}
+
+for _, akey in ipairs(upanddown) do
+  for _, astep in ipairs(brightness_steps) do
+    globalkeys = gears.table.join(globalkeys,
+        awful.key(astep.modi, "XF86MonBrightness" .. (akey.key),
+                  function () awful.spawn(
+                    "xbacklight -" .. (akey.opt) .. " " .. (astep.n)) end,
+                  {description = (astep.n), group = "xbacklight"}))
+  end
+end
+
+audiokeys = {
+  RaiseVolume = "up",
+  LowerVolume = "down",
+  Mute = "mute",
+  MicMute = "mute-input"}
+
+for key, pa in pairs(audiokeys) do
+  globalkeys = gears.table.join(globalkeys,
+      awful.key({}, "XF86Audio"..key, function () awful.spawn(
+        "pulseaudio-ctl "..pa) end,
+        {description = "pulseaudio-ctl "..pa, group = "xf86Audio"}))
+end
+
 clientbuttons = gears.table.join(
     awful.button({ }, 1, function (c)
         c:emit_signal("request::activate", "mouse_click", {raise = true})
