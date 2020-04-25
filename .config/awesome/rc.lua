@@ -110,8 +110,10 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock(" %a %b %d,\n      %H:%M ")
-mytextclock.font = "DejaVu Sans 10"
+mytextdate = wibox.widget.textclock("  %a %b %d ")
+mytextclock = wibox.widget.textclock(" %H:%M")
+mytextdate.font = "DejaVu Sans 8"
+mytextclock.font = "DejaVu Sans 15"
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -268,6 +270,7 @@ awful.screen.connect_for_each_screen(function(s)
               mykeyboardlayout
             },
             mysystray,
+            mytextdate,
             mytextclock,
             {
                 layout = wibox.layout.flex.horizontal,
