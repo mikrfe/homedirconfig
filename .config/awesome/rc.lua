@@ -12,7 +12,7 @@ local wibox = require("wibox")
 local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
-local menubar = require("menubar")
+menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 
 --local lain = require("lain")
@@ -388,7 +388,11 @@ globalkeys = gears.table.join(
               {description = "lua execute prompt", group = "awesome"}),
     -- Menubar
     awful.key({ modkey }, "d", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"})
+              {description = "show the menubar", group = "launcher"}),
+    awful.key({ modkey }, "g", function() menubar.show() end,
+              {description = "show the menubar", group = "launcher"}),
+    awful.key({ modkey }, "e", function() awful.screen.focused().mypromptbox:run() end,
+              {description = "mypromptbox, may do dolphin when D wont work", group = "launcher"})
 )
 
 clientkeys = gears.table.join(
