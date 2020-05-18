@@ -113,3 +113,5 @@ gpg-connect-agent updatestartuptty /bye >/dev/null
 
 # The next line updates PATH for Netlify's Git Credential Helper.
 if [ -f '/home/mf/.netlify/helper/path.bash.inc' ]; then source '/home/mf/.netlify/helper/path.bash.inc'; fi
+
+eval "$(direnv hook bash)"
