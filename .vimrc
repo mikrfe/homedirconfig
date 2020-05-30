@@ -30,23 +30,9 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-Plugin 'L9'
-" Git plugin not hosted on GitHub
 "Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-"Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Avoid a name conflict with L9
-"Plugin 'user/L9', {'name': 'newL9'}
-"Plugin 'Valloric/YouCompleteMe'
-Plugin 'Shougo/neocomplete.vim'
+"Plugin 'Shougo/neocomplete.vim'
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 Plugin 'sudo.vim'
@@ -63,19 +49,15 @@ Plugin 'LaTeX-Box-Team/LaTeX-Box'
 Plugin 'lpenz/vimcommander'
 Plugin 'vimcat'
 Plugin 'fmoralesc/vim-pinpoint'
-Plugin 'openscad.vim'
 " Plugin 'scrooloose/syntastic'
 Plugin 'majutsushi/tagbar'
 Plugin 'vim-jp/vim-go-extra'
 Plugin 'ledger/vim-ledger'
 Plugin 'bling/vim-airline'
-"Plugin 'edkolev/promptline.vim'
-"Plugin 'edkolev/tmuxline.vim'
 Plugin 'fatih/vim-go'
 Plugin 'wannesm/wmgraphviz.vim'
 "Plugin 'garyburd/go-explorer'
 "Plugin 'rjohnsondev/vim-compiler-go'
-"Plugin 'wakatime/vim-wakatime'
 Plugin 'peterhoeg/vim-qml'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Chiel92/vim-autoformat'
@@ -86,8 +68,6 @@ Plugin 'Konfekt/FastFold'
 Plugin 'ludovicchabant/vim-lawrencium'
 
 Plugin 'Blackrush/vim-gocode'
-
-Plugin 'davidhalter/jedi-vim'
 
 "Plugin 'sourcegraph/sourcegraph-vim'
 
@@ -110,6 +90,8 @@ Plugin 'tpope/vim-speeddating'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'tpope/vim-repeat'
 Plugin 'vim-scripts/utl.vim'
+
+Plugin 'zxqfl/tabnine-vim'
 
 let g:SOURCEGRAPH_AUTO = "false"
 
