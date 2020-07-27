@@ -3,5 +3,4 @@ exec 3>&0
 exec < /dev/tty
 STORED="$(mktemp)"
 <&3 cat > "$STORED"
-links -force-html -dump "file://$STORED" |
-less -R
+links -force-html -dump "file://$STORED"

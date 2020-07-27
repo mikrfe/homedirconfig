@@ -4,4 +4,4 @@ exec < /dev/tty
 export COLUMNS=80
 pandoc -f html -t ~/.util/pandoc-terminal-writer/terminal.lua <(\
 	<&3 enca -x utf-8 | iconv -f utf8 -t utf8 \
-) | less -R
+)
