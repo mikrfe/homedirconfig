@@ -15,6 +15,11 @@ exec 3<&0
 exec < /dev/tty
 dd if=/dev/fd/3 of="$original" 2>&1 | >&2 tail -1
 exec 3<&-
+if [[ ! -s "$original" ]]
+then
+    >&2 echo "!!! welp, ht_ ain't got no bytes!"
+    exit 1
+fi
 
 SOURCE="${BASH_SOURCE[0]}"
 while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
@@ -28,7 +33,7 @@ for i in "${failover[@]}"
 do
     >&2 echo "this is ht_, doing $i now"
     temp="$(mktemp)"
-    "$DIR/ht$i.sh" < "$original" |
+    ("$DIR/ht$i.sh" < "$original" || (>&2 echo "it failed."; false)) |
     dd \
     status=none \
     of="$temp" &&
