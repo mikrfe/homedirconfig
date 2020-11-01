@@ -4,9 +4,12 @@
 # exclude patterns (uncomment them if you want to use them):
 # *.[oa]
 *~
+
 *.pk3
 /.openarena/*/*.pk3
 /.openarena/*/*~
+/.openarena/*/*.pk3.tmp
+/.openarena/qkey
 
 /.gd/
 
@@ -59,6 +62,14 @@
 /.wget-hsts
 
 /.jdk/
+
+/.gnupg/pubring.kbx
+/.gnupg/trustdb.gpg
+.logzxprofile
+.xsession-errors
+.xsession-errors.old
+
+/.compose-cache/
 
 # temporary
 /.muttrc
