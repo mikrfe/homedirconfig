@@ -496,9 +496,16 @@ for i = 0, 9 do
     )
 end
 
-globalkeys = gears.table.join(globalkeys,
-    awful.key({}, "XF86Launch1", function () awful.spawn("xlock") end,
-        {description = "xlock", group = "useful"}))
+xlockkeys = {
+   {key = "Delete", mod = {modkey}},
+   {key = "XF86Launch1", mod = {}}}
+
+for _, akey in ipairs(xlockkeys) do
+   globalkeys = gears.table.join(
+      globalkeys,
+      awful.key(akey.mod, akey.key, function () awful.spawn("xlock") end,
+		{description = "xlock", group = "useful"}))
+end
 
 brightness_steps = {
   {n = 10, modi = {}},
