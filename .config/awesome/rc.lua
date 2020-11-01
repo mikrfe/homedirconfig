@@ -177,6 +177,8 @@ gears.wallpaper.set("#555")
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
 -- screen.connect_signal("property::geometry", set_wallpaper)
 
+beautiful.taglist_font = "Courier Black Condensed 4"
+
 awful.screen.connect_for_each_screen(function(s)
     -- Wallpaper
     -- set_wallpaper(s)
@@ -201,8 +203,9 @@ awful.screen.connect_for_each_screen(function(s)
         buttons = taglist_buttons,
         layout = {
           layout = wibox.layout.grid, homogenous = true,
-          orientation = horizontal, forced_height = 32,
-          forced_num_cols = 5
+          orientation = horizontal, forced_height = 34,
+          forced_num_cols = 5,
+	  min_rows_size = 16, horizontal_expand = true
         },
     }
 
