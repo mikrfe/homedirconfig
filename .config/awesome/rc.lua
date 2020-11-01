@@ -112,8 +112,8 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 -- Create a textclock widget
 mytextdate = wibox.widget.textclock("  %a %b %d ")
 mytextclock = wibox.widget.textclock(" %H:%M")
-mytextdate.font = "DejaVu Sans 8"
-mytextclock.font = "DejaVu Sans 15"
+mytextdate.font = "DejaVu Sans 5"
+mytextclock.font = "DejaVu Sans 12"
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -267,7 +267,14 @@ awful.screen.connect_for_each_screen(function(s)
             {
               layout = wibox.container.margin,
               color = "#555", top = 1, bottom = 1, left = 1, right = 1,
-              mykeyboardlayout
+              {
+		 layout = wibox.container.scroll.horizontal,
+		 step_function = wibox.container.scroll.step_functions
+		    .nonlinear_back_and_forth,
+		 speed = 50,
+		 fps = 0.8,
+		 mykeyboardlayout
+	      }
             },
             mysystray,
             mytextdate,
