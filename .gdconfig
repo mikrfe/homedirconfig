@@ -3,3 +3,6 @@
 [submodule ".emacs.d"]
 	url = https://github.com/mkf/mkf.emacs.d
 	active = true
+[submodule ".config/awesome/volume-control"]
+	url = https://github.com/deficient/volume-control
+	active = true

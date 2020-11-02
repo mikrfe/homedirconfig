@@ -177,6 +177,9 @@ gears.wallpaper.set("#555")
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
 -- screen.connect_signal("property::geometry", set_wallpaper)
 
+local volume_control = require("volume-control")
+volumecfg = volume_control {device="pulse"}
+
 beautiful.taglist_font = "Courier Black Condensed 4"
 beautiful.tasklist_font = "Dejavu Sans Condensed 7"
 
@@ -280,8 +283,9 @@ awful.screen.connect_for_each_screen(function(s)
 		 mykeyboardlayout
 	      }
             },
+	    volumecfg.widget,
             mysystray,
-            mytextdate,
+	    mytextdate,
             mytextclock,
             {
                 layout = wibox.layout.flex.horizontal,
@@ -538,16 +542,16 @@ for _, akey in ipairs(upanddown) do
 end
 
 audiokeys = {
-  RaiseVolume = "up",
-  LowerVolume = "down",
-  Mute = "mute",
-  MicMute = "mute-input"}
+   RaiseVolume = function() volumecfg:up() end,
+   LowerVolume = function() volumecfg:down() end,
+   Mute = function() volumecfg:toggle() end,
+   MicMute = function () awful.spawn("pulseaudio-ctl mute-input") end}
 
 for key, pa in pairs(audiokeys) do
-  globalkeys = gears.table.join(globalkeys,
-      awful.key({}, "XF86Audio"..key, function () awful.spawn(
-        "pulseaudio-ctl "..pa) end,
-        {description = "pulseaudio-ctl "..pa, group = "xf86Audio"}))
+   globalkeys = gears.table.join(
+      globalkeys,
+      awful.key({}, "XF86Audio"..key, pa,
+	 {description = "volume mgmt", group = "xf86Audio"}))
 end
 
 clientbuttons = gears.table.join(

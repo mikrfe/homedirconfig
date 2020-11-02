@@ -1,3 +1,6 @@
 [submodule ".emacs.d"]
 	path = .emacs.d
 	url = https://github.com/mkf/mkf.emacs.d
+[submodule ".config/awesome/volume-control"]
+	path = .config/awesome/volume-control
+	url = https://github.com/deficient/volume-control
