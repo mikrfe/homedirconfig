@@ -178,6 +178,7 @@ gears.wallpaper.set("#555")
 -- screen.connect_signal("property::geometry", set_wallpaper)
 
 beautiful.taglist_font = "Courier Black Condensed 4"
+beautiful.tasklist_font = "Dejavu Sans Condensed 7"
 
 awful.screen.connect_for_each_screen(function(s)
     -- Wallpaper
