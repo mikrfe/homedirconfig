@@ -48,7 +48,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+beautiful.init(gears.filesystem.get_themes_dir() .. "sky/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "xterm"
@@ -172,7 +172,7 @@ local tasklist_buttons = gears.table.join(
 --   to = { 55, 55, 30 },
 --   stops = { { 0, "#ff0000" }, { 0.5, "#00ff00" }, { 1, "#0000ff" } }
 -- })
-gears.wallpaper.set("#555")
+gears.wallpaper.set("#ccc")
 
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
 -- screen.connect_signal("property::geometry", set_wallpaper)
@@ -247,7 +247,7 @@ awful.screen.connect_for_each_screen(function(s)
     -- Create the wibox
     s.mywibox = awful.wibar({
         position = "right", screen = s,
-        width = 70
+        width = 70, bg = "lightgray"
     })
 
     mysystray = wibox.widget.systray()
