@@ -1,5 +1,6 @@
 {
     "rust-client.disableRustup": true,
     "tabnine.experimentalAutoImports": true,
-    "git.fetchOnPull": true
+    "git.fetchOnPull": true,
+    "workbench.colorTheme": "Default Light+"
 }
