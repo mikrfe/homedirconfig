@@ -4,8 +4,6 @@ export QT_IM_MODULE=ibus
 
 # ibus-daemon -drx
 
-xset m 3/2 16 &
-
 # numlockx &
 # xflux -l 53.02 -g 18.60 -r 1 &
 # recollindex -m -w 60 &
