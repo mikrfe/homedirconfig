@@ -1,4 +1,5 @@
 {
     "rust-client.disableRustup": true,
-    "tabnine.experimentalAutoImports": true
+    "tabnine.experimentalAutoImports": true,
+    "git.fetchOnPull": true
 }
