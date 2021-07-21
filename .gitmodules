@@ -1,3 +1,6 @@
 [submodule ".emacs.d"]
 	path = .emacs.d
 	url = https://github.com/mkf/mkf.emacs.d
+[submodule ".howl/howl-nix"]
+	path = .howl/howl-nix
+	url = https://github.com/rokf/howl-nix
