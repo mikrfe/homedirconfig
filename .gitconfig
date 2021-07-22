@@ -1,6 +1,6 @@
 [user]
 	email = m@mikf.pl
-	name = Michał Krzysztof Feiler
+	name = Mika Feiler
 	signingkey = 1E369940CC7E01C4CFE8F20AE35C2D7C2C6AC724
 [gpg]
 	program = gpg2
