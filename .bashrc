@@ -86,6 +86,7 @@ alias gvi='gvim'
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+source "$HOME/.util/flo.bash"
 
 # Start the gpg-agent if not already running
 if ! pgrep -x -u "${USER}" gpg-agent >/dev/null 2>&1; then
