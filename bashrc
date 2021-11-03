@@ -37,7 +37,7 @@ if [ -f ~/config/settings/bash_aliases ]; then
     .  ~/config/settings/bash_aliases
 fi
 
-alias _flo_='lftp -p 2024 -u mkf,$(</home/flopassword) sftp://flounder.online \
+alias _flo_='lftp -p 2024 -u mkf,$(</home/.flopassword) sftp://flounder.online \
     -e '\''mirror -n --delete --exclude=^\.git/$ -P -v '
 alias flogetn='_flo_ . ~/flounderl/; bye'\'''
 alias flopush='_flo_ -R ~/flounderl/ .; bye'\'''
