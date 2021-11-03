@@ -1,22 +1,14 @@
 STARTTIMEBASH5="$EPOCHREALTIME"
-< /proc/uptime builtin read START_PROC_UPTIME
 case "$-" in
     *i* ) ;;
-    * ) unset START_PROC_UPTIME; unset STARTTIMEBASH5; return ;;
+    * ) unset STARTTIMEBASH5; return ;;
 esac
 if [[ "${BASH_VERSINFO:-0}" -le 4 ]]; then
     >&2 echo "Warning: Staying in Bash $BASH (version $BASH_VERSINFO) < 5."
 else
     STARTTIMEBASH5=(${STARTTIMEBASH5: 0 : -7 } ${STARTTIMEBASH5: -6 : 6 })
 fi
-START_PROC_UPTIME=($START_PROC_UPTIME)
 builtin printf -v INVOKETIMEBASH '%(%s)T' -2
-
-< /proc/self/stat builtin read START_PROC_SELF_STAT # no -a because [1] is () delimited and may contain space
-# 1 ([0]) — PID; 22 ([23]) — starttime (jiffies)
-PROC_SELF_STAT_STARTTIME="${START_PROC_SELF_STAT##*\)}"
-PROC_SELF_STAT_STARTTIME=($PROC_SELF_STAT_STARTTIME)
-PROC_SELF_STAT_STARTTIME="${PROC_SELF_STAT_STARTTIME[19]}"
 
 alias s="echo \$?"
 alias d="pwd -L"
