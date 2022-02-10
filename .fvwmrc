@@ -86,7 +86,6 @@ AddToFunc RestartFunction "I" Module FvwmButtons
 
 ######################## Menus ###################
 AddToMenu RootMenu	"Root Menu"	Title
-+			"XTerm"		Exec exec xterm
 +			"URxvt"		Exec exec urxvt
 +			"Firefox"	Exec exec firefox
 +			""		Nop
@@ -104,6 +103,7 @@ AddToMenu RootMenu	"Root Menu"	Title
 +			"Exit Fvwm"	Popup Quit-Verify
 
 AddToMenu Utilities     "Utilities" Title
++			"XTerm"		Exec exec xterm
 +			"Top"		Exec exec xterm -T Top -n Top -e top
 +			"Calculator"	Exec exec xcalc
 +			"Xmag"		Exec exec xmag
