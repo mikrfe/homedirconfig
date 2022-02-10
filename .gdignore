@@ -25,6 +25,9 @@
 /.ssh/**
 !/.ssh/config
 
+/.gnupg/**
+!/.gnupg/gpg.conf
+
 /.project
 /.plan
 
