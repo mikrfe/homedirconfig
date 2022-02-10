@@ -31,11 +31,15 @@ if ($?prompt) then
 	set filec
 	set history = 5000
 	set savehist = (5000 merge)
+	set histdup = prev
 	set ignoreeof
 	set mail = (/var/mail/$USER)
 	set mch = `hostname -s`
 	set editors = 'vim vi'
 	bindkey "^Z" run-fg-editor
+	set ourday = `date +%Y-%m-%d`
+	ln -fs ~/.real_history_$ourday ~/.real_history
+	alias postcmd 'history 1 >>' ~/.real_history_$ourday
 	alias prompt 'set prompt = "$mch:q"":$cwd:t {\!} "'
 	alias cd 'cd \!*; prompt'
 	alias chdir 'cd \!*; prompt'
