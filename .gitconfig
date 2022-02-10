@@ -1,0 +1,30 @@
+[user]
+	email = m@mikf.pl
+	name = Mika Feiler
+[github]
+	user = mkf
+[core]
+	pager = less -r
+[push]
+	default = simple
+[diff]
+	submodule = log
+[alias]
+	d = difftool
+	m = mergetool
+	c = commit -am
+	logs = log --show-signature
+	cis = commit -S
+[web]
+	browser = firefox
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+# This next lines include Netlify's Git Credential Helper configuration in your Git configuration.
+[include]
+  path = /home/mf/.netlify/helper/git-config
+[status]
+	submodulesummary = 1

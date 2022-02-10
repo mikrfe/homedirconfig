@@ -1,0 +1,5 @@
+[core]
+	excludesfile = ~/.gdignore
+[submodule ".emacs.d"]
+	url = https://github.com/mkf/mkf.emacs.d
+	active = true
