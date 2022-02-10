@@ -68,3 +68,5 @@
 /d
 /.real_histor*
 /.xsession-errors
+/.history
+/.history_tcsh
