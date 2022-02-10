@@ -24,10 +24,13 @@ set editors = (vi vim)
 setenv EDITOR vim
 setenv VISUAL vim
 
+set histfile = ~/.history_tcsh
+
 if ($?prompt) then
 	# An interactive shell -- set some stuff up
 	set filec
-	set history = 1000
+	set history = 5000
+	set savehist = (5000 merge)
 	set ignoreeof
 	set mail = (/var/mail/$USER)
 	set mch = `hostname -s`
