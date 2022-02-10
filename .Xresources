@@ -1,0 +1,9 @@
+XIdle*timeout	: 300
+XIdle*program	: xlock
+
+XIdle*position	: sw
+XIdle*delay	: 5
+
+XLock.dpmsoff    : 1
+XLock.dpmsstandby: 5
+XLock.mode       : blank
