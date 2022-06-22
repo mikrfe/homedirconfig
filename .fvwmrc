@@ -120,7 +120,7 @@ AddToMenu Utilities     "Utilities" Title
 +			""		Nop
 +                       "XLock"         Exec exec xlock -mode random
 +			""		Nop
-+                       "Reset X defaults" Exec xrdb -load $HOME/.Xdefaults 
++                       "Reset X defaults" Exec xrdb -load $HOME/.Xresources
 
 AddToMenu Misc-Ops "Misc Config Opts" Title
 +                  "Sloppy Focus"        ChangeDefaultFocus SloppyFocus
