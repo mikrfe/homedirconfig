@@ -80,3 +80,4 @@
 /.config/netsurf/Cookies
 /.config/netsurf/URLs
 /.dbus
+/homedirconfig
