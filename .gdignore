@@ -76,3 +76,4 @@
 /.config/InSilmaril/vym.conf
 /.config/KDE/neochat.conf
 /.config/dconf/user
+/.config/gomuks/config.yaml
