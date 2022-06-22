@@ -4,6 +4,9 @@ x-scheme-handler/news=userapp-SeaMonkey-CRDSH1.desktop
 x-scheme-handler/snews=userapp-SeaMonkey-CRDSH1.desktop
 message/rfc822=userapp-SeaMonkey-CRDSH1.desktop
 application/x-extension-eml=userapp-SeaMonkey-CRDSH1.desktop
+x-scheme-handler/feed=userapp-SeaMonkey-CRDSH1.desktop
+application/rss+xml=userapp-SeaMonkey-CRDSH1.desktop
+application/x-extension-rss=userapp-SeaMonkey-CRDSH1.desktop
 
 [Added Associations]
 x-scheme-handler/mailto=userapp-SeaMonkey-CRDSH1.desktop;
@@ -11,3 +14,7 @@ x-scheme-handler/news=userapp-SeaMonkey-CRDSH1.desktop;
 x-scheme-handler/snews=userapp-SeaMonkey-CRDSH1.desktop;
 message/rfc822=userapp-SeaMonkey-CRDSH1.desktop;
 application/x-extension-eml=userapp-SeaMonkey-CRDSH1.desktop;
+x-scheme-handler/feed=userapp-SeaMonkey-CRDSH1.desktop;
+application/rss+xml=userapp-SeaMonkey-CRDSH1.desktop;
+application/x-extension-rss=userapp-SeaMonkey-CRDSH1.desktop;
+application/x-xpinstall=seamonkey.desktop;
