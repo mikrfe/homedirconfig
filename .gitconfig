@@ -28,3 +28,5 @@
   path = /home/mf/.netlify/helper/git-config
 [status]
 	submodulesummary = 1
+[pull]
+	rebase = false
