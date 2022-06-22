@@ -79,3 +79,4 @@
 /.config/gomuks/config.yaml
 /.config/netsurf/Cookies
 /.config/netsurf/URLs
+/.dbus
