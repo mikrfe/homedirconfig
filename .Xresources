@@ -9,3 +9,5 @@ XLock.dpmsstandby: 5
 XLock.mode       : blank
 
 Emacs.geometry	 : 80x30
+
+XTerm*loginShell : true
