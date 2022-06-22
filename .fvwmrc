@@ -50,6 +50,7 @@ Style "xgraph"      Icon graphs.xpm, RandomPlacement, ClickToFocus
 Style "xmosaic"     Color Green/Yellow, ClickToFocus
 
 Style "emacs"	    ActivePlacement
+Style "Gorm"	    ClickToFocus
 
 # some simple default key bindings:
 Key Next         A       SCM     Next [*] Focus
