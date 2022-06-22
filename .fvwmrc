@@ -356,7 +356,7 @@ AddToFunc ChangeDefaultFocus "I" Style "*" $0
 ############################################################
 # Note that icons are shown in the module
 #    only if NoIcon commnand is applied.
-#Style     "*"  NoIcon
+Style     "*"  NoIcon
 
 ############################################################
 *FvwmIconBoxIconBack    #cfcfcf
