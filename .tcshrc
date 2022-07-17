@@ -2,7 +2,7 @@
 #
 # csh initialization
 
-# vi: autoindent tabstop=8 noexpandtab
+# vi: tabstop=8 noexpandtab
 
 alias df	df -k
 alias du	du -k
@@ -18,16 +18,17 @@ alias z		suspend
 alias flo	'pass -c flounder.online/m@mikf.pl && '\
 			'sftp sftp://mkf@flounder.online:2024/'
 
-alias vi	vim
-alias nano	vim
-
 alias gcm	git commit -am
 alias gd	env GIT_WORK_TREE="$HOME" GIT_DIR="$HOME/.gd" GIT_CONFIG="$HOME/.gdconfig" git -c "core.excludesfile=$HOME/.gdignore"
 
 set path = (~/bin /bin /sbin /usr/{bin,sbin,X11R6/bin,local/bin,local/sbin,games})
 set editors = (vi vim)
-setenv EDITOR emacsclient -a=""
-setenv VISUAL emacsclient -a=""
+setenv EDITOR 'emacsclient -a=""'
+setenv VISUAL 'emacsclient -a=""'
+
+alias i 	$VISUAL
+alias v 	$VISUAL
+alias e 	$EDITOR
 
 set histfile = ~/.history_tcsh
 
