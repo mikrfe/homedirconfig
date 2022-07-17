@@ -75,8 +75,8 @@ Key	XF86Forward A	A	Next [*] FocusRaise
 Key	Return	    A	4	LaunchSt
 Key	E	    A	4	Next [Emacs] SelectWindow
 
-AddToFunc FocusRaise I Raise
-+ I Focus
+AddToFunc FocusRaise I Focus
++ I Raise
 
 AddToFunc LaunchSt I Exec exec st
 + I Wait st
@@ -85,8 +85,8 @@ AddToFunc LaunchSt I Exec exec st
 
 AddToFunc SelectWindow
 + I Iconify -1
++ I FlipFocus
 + I Raise
-+ I Focus
 + I WarpToWindow 50 8p
 
 # some simple default mouse bindings:
