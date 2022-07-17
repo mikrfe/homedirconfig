@@ -26,8 +26,8 @@ alias gd	env GIT_WORK_TREE="$HOME" GIT_DIR="$HOME/.gd" GIT_CONFIG="$HOME/.gdconf
 
 set path = (~/bin /bin /sbin /usr/{bin,sbin,X11R6/bin,local/bin,local/sbin,games})
 set editors = (vi vim)
-setenv EDITOR vim
-setenv VISUAL vim
+setenv EDITOR emacsclient -a=""
+setenv VISUAL emacsclient -a=""
 
 set histfile = ~/.history_tcsh
 
