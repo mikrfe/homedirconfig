@@ -17,5 +17,5 @@ done
 xrdb -load ~/.Xresources
 xidle &
 st &
-emacs --iconic &
+(while emacs --iconic; do done) &
 fvwm
