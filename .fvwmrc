@@ -59,7 +59,16 @@ Key	D	A	4	RaiseLower
 Key	Tab	A	M	RaiseLower
 
 Key	S	A	4	Iconify
-Key	L	A	4	WindowList
+Key	M	A	4	WindowList
+
+Key	J	  A	4	Scroll +100 0
+Key	K	  A	4	Scroll -100 0
+Key	L	  A	4	Scroll 0 +100
+Key	semicolon A	4	Scroll 0 -100
+Key	P	  A	4	Scroll +100000 0
+
+Key	XF86Back    A	A	Prev [*] Focus
+Key	XF86Forward A	A	Next [*] Focus
 
 # some simple default mouse bindings:
 #   for the root window:
