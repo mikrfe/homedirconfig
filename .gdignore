@@ -82,3 +82,4 @@
 /.fvwmrc.swp
 /*.core
 .slime-history.eld
+.sc_history
