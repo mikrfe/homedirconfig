@@ -80,3 +80,4 @@
 /.config/netsurf/URLs
 /.dbus
 /.fvwmrc.swp
+/*.core
