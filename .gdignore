@@ -81,3 +81,4 @@
 /.dbus
 /.fvwmrc.swp
 /*.core
+.slime-history.eld
