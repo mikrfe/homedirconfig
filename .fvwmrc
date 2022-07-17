@@ -49,7 +49,6 @@ Style "xmag"	    Icon mag_glass.xpm, RandomPlacement, ClickToFocus
 Style "xgraph"      Icon graphs.xpm, RandomPlacement, ClickToFocus
 Style "xmosaic"     Color Green/Yellow, ClickToFocus
 
-Style "emacs"	    ActivePlacement
 Style "Gorm"	    ClickToFocus
 
 # some simple default key bindings:
