@@ -2,6 +2,8 @@
 #
 # csh initialization
 
+# vi: autoindent tabstop=8 noexpandtab
+
 alias df	df -k
 alias du	du -k
 alias f		finger
@@ -50,11 +52,11 @@ if ($?prompt) then
 	alias pushd 'pushd \!*; prompt'
 	cd .
 	umask 22
-        bindkey "\e[1~" beginning-of-line # Home
-        bindkey "\e[7~" beginning-of-line # Home rxvt
-        bindkey "\e[2~" overwrite-mode    # Ins
-        bindkey "\e[3~" delete-char       # Delete
-        bindkey "\e[P"  delete-char
-        bindkey "\e[4~" end-of-line       # End
-        bindkey "\e[8~" end-of-line       # End rxvt
+	bindkey "\e[1~" beginning-of-line # Home
+	bindkey "\e[7~" beginning-of-line # Home rxvt
+	bindkey "\e[2~" overwrite-mode    # Ins
+	bindkey "\e[3~" delete-char       # Delete
+	bindkey "\e[P"  delete-char
+	bindkey "\e[4~" end-of-line       # End
+	bindkey "\e[8~" end-of-line       # End rxvt
 endif
