@@ -34,6 +34,10 @@ set histfile = ~/.history_tcsh
 
 if ($?prompt) then
 	# An interactive shell -- set some stuff up
+	if (! -p /tmp/tcshwindowid) then
+	    mkfifo /tmp/tcshwindowid
+	endif
+	echo "$WINDOWID" > /tmp/tcshwindowid
 	set filec
 	set history = 5000
 	set savehist = (5000 merge)

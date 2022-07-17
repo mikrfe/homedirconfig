@@ -50,6 +50,7 @@ Style "xgraph"      Icon graphs.xpm, RandomPlacement, ClickToFocus
 Style "xmosaic"     Color Green/Yellow, ClickToFocus
 
 Style "Gorm"	    ClickToFocus
+Style "st"	    GrabFocus
 
 # some simple default key bindings:
 Key Next         A       SCM     Next [*] Focus
@@ -58,8 +59,9 @@ Key Prior        A       SCM     Prev [*] Focus
 Key	D	A	4	RaiseLower
 Key	Tab	A	M	RaiseLower
 
-Key	S	A	4	Iconify
 Key	M	A	4	WindowList
+Key	W	    A	4	Iconify
+Key	Q	    A	4	Menu Window-Ops2 Close
 
 Key	J	  A	4	Scroll +100 0
 Key	K	  A	4	Scroll -100 0
@@ -67,8 +69,25 @@ Key	L	  A	4	Scroll 0 +100
 Key	semicolon A	4	Scroll 0 -100
 Key	P	  A	4	Scroll +100000 0
 
-Key	XF86Back    A	A	Prev [*] Focus
-Key	XF86Forward A	A	Next [*] Focus
+Key	XF86Back    A	A	Prev [*] FocusRaise
+Key	XF86Forward A	A	Next [*] FocusRaise
+
+Key	Return	    A	4	LaunchSt
+Key	E	    A	4	Next [Emacs] SelectWindow
+
+AddToFunc FocusRaise I Raise
++ I Focus
+
+AddToFunc LaunchSt I Exec exec st
++ I Wait st
++ I PipeRead `sh -c "if [ ! -p /tmp/tcshwindowid ]; then mkfifo /tmp/tcshwindowid; fi; echo WindowId $(head -1 /tmp/tcshwindowid) Focus"`
+#+ I Next [st !Iconic Visible Raised CurrentPage] Focus
+
+AddToFunc SelectWindow
++ I Iconify -1
++ I Raise
++ I Focus
++ I WarpToWindow 50 8p
 
 # some simple default mouse bindings:
 #   for the root window:
@@ -88,6 +107,14 @@ Mouse 1	I	A	Move-or-Iconify
 Mouse 2	I	A	Iconify
 Mouse 2	FST	A	Menu Window-Ops2 Nop
 Mouse 3	TSIF	A	RaiseLower
+
+Mouse 1	W	4	Move-or-Raise
+Mouse 1	I	4	Move
+# Mouse 2 W	4	Resize Nop
+# Mouse 4	W	4	Resize keep w-1p
+# Mouse 5	W	4	Resize keep w+1p
+# Mouse 6	W	4	Resize w-1p keep
+# Mouse 7	W	4	Resize w+1p keep
 
 ######################## Initialization Functions ############################
 AddToFunc InitFunction 	  "I" Module FvwmButtons
