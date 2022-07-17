@@ -58,6 +58,9 @@ Key Prior        A       SCM     Prev [*] Focus
 Key	D	A	4	RaiseLower
 Key	Tab	A	M	RaiseLower
 
+Key	S	A	4	Iconify
+Key	L	A	4	WindowList
+
 # some simple default mouse bindings:
 #   for the root window:
 Mouse 1	R   	A       Menu RootMenu Nop
