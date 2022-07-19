@@ -78,9 +78,11 @@ Key	E	    A	4	Next [Emacs] SelectWindow
 AddToFunc FocusRaise I Focus
 + I Raise
 
-AddToFunc LaunchSt I Exec exec st
+AddToFunc LaunchSt
++ I Exex exec "mkfifo /tmp/tcshwindowid"
++ I Exec exec st
 + I Wait st
-+ I PipeRead `sh -c "if [ ! -p /tmp/tcshwindowid ]; then mkfifo /tmp/tcshwindowid; fi; echo WindowId $(head -1 /tmp/tcshwindowid) Focus"`
++ I PipeRead `sh -c "echo WindowId $(head -1 /tmp/tcshwindowid) Focus"`
 #+ I Next [st !Iconic Visible Raised CurrentPage] Focus
 
 AddToFunc SelectWindow
@@ -126,7 +128,7 @@ AddToFunc RestartFunction "I" Module FvwmButtons
 
 ######################## Menus ###################
 AddToMenu RootMenu	"Root Menu"	Title
-+			"St"		Exec exec st
++			"St"		LaunchSt
 +			"Firefox"	Exec exec firefox
 +			""		Nop
 +			"Emacs"		Exec exec emacs

@@ -23,8 +23,8 @@ alias gd	env GIT_WORK_TREE="$HOME" GIT_DIR="$HOME/.gd" GIT_CONFIG="$HOME/.gdconf
 
 set path = (~/bin /bin /sbin /usr/{bin,sbin,X11R6/bin,local/bin,local/sbin,games})
 set editors = (vi vim)
-setenv EDITOR 'emacsclient -a=""'
-setenv VISUAL 'emacsclient -a=""'
+setenv EDITOR 'emacsclient -a "emacsclient -s /tmp/emacs1000/server -a="'
+setenv VISUAL "$EDITOR"
 
 alias i 	$VISUAL
 alias v 	$VISUAL
@@ -34,10 +34,10 @@ set histfile = ~/.history_tcsh
 
 if ($?prompt) then
 	# An interactive shell -- set some stuff up
-	if (! -p /tmp/tcshwindowid) then
-	    mkfifo /tmp/tcshwindowid
+	if (-p /tmp/tcshwindowid) then
+	    echo "$WINDOWID" > /tmp/tcshwindowid
+	    rm /tmp/tcshwindowid
 	endif
-	echo "$WINDOWID" > /tmp/tcshwindowid
 	set filec
 	set history = 5000
 	set savehist = (5000 merge)
