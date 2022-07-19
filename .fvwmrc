@@ -79,9 +79,9 @@ AddToFunc FocusRaise I Focus
 + I Raise
 
 AddToFunc LaunchSt
-+ I Exex exec "mkfifo /tmp/tcshwindowid"
++ I Exec exec "mkfifo /tmp/tcshwindowid"
 + I Exec exec st
-+ I Wait st
+#+ I Wait st
 + I PipeRead `sh -c "echo WindowId $(head -1 /tmp/tcshwindowid) Focus"`
 #+ I Next [st !Iconic Visible Raised CurrentPage] Focus
 
