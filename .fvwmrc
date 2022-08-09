@@ -56,6 +56,13 @@ Style "st"	    GrabFocus
 Key Next         A       SCM     Next [*] Focus
 Key Prior        A       SCM     Prev [*] Focus
 
+AddToFunc LowerVolume I Exec exec sndioctl "output.level=-0.01"
+Key XF86AudioLowerVolume     A	  A	   LowerVolume
+AddToFunc RaiseVolume I Exec exec sndioctl "output.level=+0.01"
+Key XF86AudioRaiseVolume     A	  A	   RaiseVolume
+AddToFunc MuteVolume I Exec exec sndioctl "output.mute=!"
+Key XF86AudioMute            A	  A	   MuteVolume
+
 Key	D	A	4	RaiseLower
 Key	Tab	A	M	RaiseLower
 
