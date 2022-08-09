@@ -1,0 +1,67 @@
+# $OpenBSD: dot.cshrc,v 1.10 2020/01/24 02:09:51 okan Exp $
+#
+# csh initialization
+
+# vi: tabstop=8 noexpandtab
+
+alias df	df -k
+alias du	du -k
+alias f		finger
+alias h		'history -r | more'
+alias j		jobs -l
+alias la	ls -a
+alias lf	ls -FA
+alias ll	ls -lsA
+alias tset	'set noglob histchars=""; eval `\tset -s \!*`; unset noglob histchars'
+alias z		suspend
+
+alias flo	'pass -c flounder.online/m@mikf.pl && '\
+			'sftp sftp://mkf@flounder.online:2024/'
+
+alias gcm	git commit -am
+alias gd	env GIT_WORK_TREE="$HOME" GIT_DIR="$HOME/.gd" GIT_CONFIG="$HOME/.gdconfig" git -c "core.excludesfile=$HOME/.gdignore"
+
+set path = (~/bin /bin /sbin /usr/{bin,sbin,X11R6/bin,local/bin,local/sbin,games})
+set editors = (vi vim)
+setenv EDITOR 'emacsclient -a "emacsclient -s /tmp/emacs1000/server -a="'
+setenv VISUAL "$EDITOR"
+
+alias i 	$VISUAL
+alias v 	$VISUAL
+alias e 	$EDITOR
+
+set histfile = ~/.history_tcsh
+
+if ($?prompt) then
+	# An interactive shell -- set some stuff up
+	if (-p /tmp/tcshwindowid) then
+	    echo "$WINDOWID" > /tmp/tcshwindowid
+	    rm /tmp/tcshwindowid
+	endif
+	set filec
+	set history = 5000
+	set savehist = (5000 merge)
+	set histdup = prev
+	set ignoreeof
+	set mail = (/var/mail/$USER)
+	set mch = ""
+	set editors = 'vim vi'
+	bindkey "^Z" run-fg-editor
+	set ourday = `date +%Y-%m-%d`
+	ln -fs ~/.real_history_$ourday ~/.real_history
+	alias postcmd 'history 1 >>' ~/.real_history_$ourday
+	alias prompt 'set prompt = "$mch:q"":$cwd:t {\!} "'
+	alias cd 'cd \!*; prompt'
+	alias chdir 'cd \!*; prompt'
+	alias popd 'popd \!*; prompt'
+	alias pushd 'pushd \!*; prompt'
+	cd .
+	umask 22
+	bindkey "\e[1~" beginning-of-line # Home
+	bindkey "\e[7~" beginning-of-line # Home rxvt
+	bindkey "\e[2~" overwrite-mode    # Ins
+	bindkey "\e[3~" delete-char       # Delete
+	bindkey "\e[P"  delete-char
+	bindkey "\e[4~" end-of-line       # End
+	bindkey "\e[8~" end-of-line       # End rxvt
+endif
