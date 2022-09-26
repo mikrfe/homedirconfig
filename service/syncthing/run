@@ -1,0 +1,5 @@
+#!/bin/sh
+
+export HOME=/home/mf/
+exec 2>&1
+exec /usr/bin/syncthing
