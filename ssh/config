@@ -3,3 +3,6 @@ Host github.com gist.github.com
 Host *
 	HostkeyAlgorithms +ssh-rsa
 	PubkeyAcceptedAlgorithms +ssh-rsa
+Host mijka
+	User mi
+	IdentityFile ~/config/settings/ssh/domowy
