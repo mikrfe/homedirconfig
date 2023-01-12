@@ -1,0 +1,5 @@
+Host github.com gist.github.com
+	IdentityFile ~/config/settings/ssh/gh-szumiku
+Host *
+	HostkeyAlgorithms +ssh-rsa
+	PubkeyAcceptedAlgorithms +ssh-rsa
