@@ -9,6 +9,7 @@ TransparentSelection on
 SortFolderNamesFirst on
 HideDotFiles off
 TypeAheadFiltering off
+GenerateImageThumbnails on
 SingleWindowBrowse off
 ShowNavigator off
 RecentApplications 10
