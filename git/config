@@ -1,0 +1,7 @@
+[user]
+        email = m@mikf.pl
+        name = Mika Feiler
+[github]
+        user = mkf
+[safe]
+	directory = /50 GiB Ext2 File System volume/etc/nixos
