@@ -87,3 +87,5 @@
 
 /.ne/nvm
 /.ne/.history
+/GNUstep/Defaults/Gorm.plist
+/GNUstep/Library/Services/.GNUstep*
