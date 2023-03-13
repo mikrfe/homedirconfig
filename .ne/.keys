@@ -1,0 +1,11 @@
+KEY	2	MoveLeft
+KEY	6	MoveRight
+KEY	E	LineDown
+KEY	10	LineUp
+KEY	1b2	Mark
+KEY	1af	Find
+KEY	1bb	Exec
+KEY	1f	Undo
+KEY	12	Redo
+KEY	145	FindRegExp
+KEY	146	Replace

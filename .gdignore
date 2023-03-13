@@ -84,3 +84,6 @@
 .slime-history.eld
 .sc_history
 /.config/QtProject.conf
+
+/.ne/nvm
+/.ne/.history
