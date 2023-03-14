@@ -89,3 +89,8 @@
 /.ne/.history
 /GNUstep/Defaults/Gorm.plist
 /GNUstep/Library/Services/.GNUstep*
+/.config/neochatrc
+/.config/netsurf/Cookies
+/.config/netsurf/Hotlist
+/.config/netsurf/URLs
+/.config/micro/buffers/history
