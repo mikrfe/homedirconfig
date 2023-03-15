@@ -17,5 +17,6 @@ done
 xrdb -load ~/.Xresources
 xidle &
 st &
-(while emacs --iconic; do done) &
-fvwm
+# (while emacs --iconic; do done) &
+# fvwm
+icewm-session
