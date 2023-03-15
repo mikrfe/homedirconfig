@@ -3,5 +3,5 @@ xbatt.ignoreTaskBar: 1
 xbatt.ignoreQuickSwitch: 1
 xbatt.ignoreWinList: 1
 xbatt.layer: Dock
-xbatt.geometry: 28x28-0-0
+xbatt.geometry: -0-0
 xbatt.doNotCover: 1

@@ -18,6 +18,8 @@ xrdb -load ~/.Xresources
 # xidle &
 # st &
 xscreensaver --no-splash &
+xbattbar -a &
+xbatt &
 # (while emacs --iconic; do done) &
 # fvwm
 icewm-session
