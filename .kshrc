@@ -1,6 +1,7 @@
 case "$-" in
 *i*)
 
+PS1='; '
 alias gcm='git commit -am'
 alias gd="GIT_WORK_TREE='$HOME' GIT_DIR='$HOME/.gd' GIT_CONFIG='$HOME/.gdconfig' \
 	git -c 'core.excludesfile=$HOME/.gdignore'"
