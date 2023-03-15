@@ -107,3 +107,5 @@
 /.jpilot/jpilot.next_id
 /.jpilot/sync_pid
 /.sh_history
+/.config/beets/library.db
+/.config/beets/state.pickle
