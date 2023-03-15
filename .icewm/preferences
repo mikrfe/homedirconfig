@@ -500,7 +500,7 @@ KeySysWinListMenu="Ctrl+Esc"
 # LimitSize=1 # 0/1
 
 #  Command to lock display/screensaver.
-# LockCommand="xlock -name icewm -mode random"
+LockCommand="xscreensaver-command -lock"
 
 #  Command to cancel logout.
 # LogoutCancelCommand=""

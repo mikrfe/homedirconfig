@@ -15,8 +15,9 @@ do
 done
 
 xrdb -load ~/.Xresources
-xidle &
-st &
+# xidle &
+# st &
+xscreensaver --no-splash &
 # (while emacs --iconic; do done) &
 # fvwm
 icewm-session
