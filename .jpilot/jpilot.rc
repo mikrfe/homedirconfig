@@ -1,0 +1,100 @@
+jpilotrc jpilotrc.default
+time 1
+sdate 0
+ldate 0
+xxx_internal1_xxx 1
+show_deleted 0
+show_modified 0
+todo_hide_completed 1
+datebook_highlight_days 1
+port /dev/ttyU0
+rate 8
+user mf
+user_id 1914606315
+pc_id 1631247136
+num_backups 20
+window_width 1352
+window_height 731
+datebook_pane 652
+address_pane 340
+todo_pane 389
+memo_pane 370
+use_db3 0
+last_app 103
+print_this_many 3
+print_one_per_page 0
+print_blank_lines 1
+print_command lpr -h
+char_set 10
+sync_datebook 1
+sync_address 1
+sync_todo 1
+sync_memo 1
+sync_memo32 0
+address_notebook_page 0
+output_height 176
+open_alarm_windows 1
+do_alarm_command 0
+alarm_command echo %t %d
+remind_in 0
+remind_units 0
+session_id ac8efec7fbd38f0ba94555f0419c39c9
+memo32_mode 0
+paper_size 0
+datebook_export_filename 
+datebook_import_path 
+address_export_filename 
+address_import_path 
+todo_export_filename 
+todo_import_path 
+memo_export_filename 
+memo_import_path 
+manana_mode 0
+sync_manana 0
+use_jos 0
+phone_prefix1 
+phone_prefix1_on 0
+phone_prefix2 
+phone_prefix2_on 0
+phone_prefix3 
+phone_prefix3_on 0
+dial_command jpilot-dial --lv 0 --rv 50 %n
+datebook_todo_pane 350
+datebook_todo_show 0
+todo_hide_not_due 1
+todo_completion_date 1
+install_path /home/mf/Downloads/
+monthview_width 640
+monthview_height 480
+weekview_width 640
+weekview_height 480
+last_date_category 300
+last_addr_category 300
+last_todo_category 300
+last_memo_category 300
+mail_command mozilla-thunderbird -remote "mailto(%s)"
+version 010802
+utf_encoding 1
+confirm_file_install 1
+todo_days_due 0
+todo_days_till_due 14
+show_tooltips 1
+datebook_note_pane 72
+datebook_hi_today 1
+datebook_anni_years 0
+keyring_pane 0
+expense_pane 0
+datebook_version 0
+address_version 0
+todo_version 0
+memo_version 0
+contacts_photo_filename 
+todo_sort_column 1
+todo_sort_order 0
+addr_sort_order 0
+addr_name_col_sz 140
+todo_note_pane 72
+expense_sort_column 0
+expense_sort_order 0
+keyr_export_filename 
+external_editor gvim -f

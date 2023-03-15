@@ -96,3 +96,13 @@
 /.config/micro/buffers/history
 /.syncterm/syncterm.lst
 /mmail/
+/.jpilot/*.prc
+/.jpilot/*.pdb
+/.jpilot/*.pc3
+/.jpilot/backup*
+/.jpilot/backup*/
+/.jpilot/jpilot.alarms
+/.jpilot/jpilot.install
+/.jpilot/jpilot.log
+/.jpilot/jpilot.next_id
+/.jpilot/sync_pid
