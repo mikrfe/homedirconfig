@@ -1,0 +1,123 @@
+# -----------------------
+# MultiMail configuration
+# -----------------------
+# 
+# Any of these keywords may be omitted, in which case the default values
+# (shown here) will be used.
+# 
+# If you change either of the base directories, all the subsequent paths
+# will be changed, unless they're overridden in the individual settings.
+# 
+# Please see the man page for a more thorough explanation of these options.
+
+Version: 0.52
+
+# Quote header for replies (non-Internet)
+QuoteHead: -=> %f wrote to %t <=-
+
+# Quote header for Internet email and Usenet replies
+InetQuote: On %d, %f wrote:
+
+# Base directories (derived from $HOME or $MMAIL)
+mmHomeDir: /home/mf/mmail
+TempDir: /home/mf/mmail
+
+# MultiMail will look for packets here
+PacketDir: /home/mf/mmail/down
+
+# Reply packets go here
+ReplyDir: /home/mf/mmail/up
+
+# Saved messages go in this directory, by default
+SaveDir: /home/mf/mmail/save
+
+# Full paths to the address book, tagline and color specification files
+AddressBook: /home/mf/mmail/addressbook
+TaglineFile: /home/mf/mmail/taglines
+ColorFile: /home/mf/mmail/colors
+
+# Color or monochrome? (Mono mode uses the default colors)
+UseColors: Yes
+
+# Make backgrounds transparent? (Only works on some platforms)
+Transparency: No
+
+# Fill background with checkerboard pattern (ACS_BOARD)?
+BackFill: Yes
+
+# Decompression commands (must include an option to junk/discard paths!)
+arjUncompressCommand: arj e
+zipUncompressCommand: unzip -joLq
+lhaUncompressCommand: lha efi
+rarUncompressCommand: rar e -cl -o+ -inul
+tarUncompressCommand: tar zxf
+unknownUncompressCommand: xxuncompress
+
+# Compression commands (must include an option to junk/discard paths!)
+arjCompressCommand: arj a -e
+zipCompressCommand: zip -jkq
+lhaCompressCommand: lha af
+rarCompressCommand: rar u -ep -inul
+tarCompressCommand: tar zcf
+unknownCompressCommand: xxcompress
+
+# Default sort for packet list: by Name or Time (most recent first)
+PacketSort: Time
+
+# Default mode for area list: All, Subscribed, or Active
+AreaMode: Subscribed
+
+# Default sort for letter list: by Subject, Number, From or To
+LetterSort: Subject
+
+# Default mode for letter list: All or Unread
+LetterMode: Unread
+
+# Clock in letter window: Off, Time (of day), or Elapsed (since startup)
+ClockMode: Time
+
+# Console character set: CP437 (IBM PC) or Latin-1 (ISO-8859-1)
+Charset: Latin-1
+
+# Prompt to add taglines to replies?
+UseTaglines: Yes
+
+# Save replies after editing without prompting?
+AutoSaveReplies: Yes
+
+# Strip "soft carriage returns" (char 141) from messages?
+StripSoftCR: No
+
+# Beep when a personal message is opened in the letter window?
+BeepOnPers: No
+
+# Use Lynx-like navigation (right arrow selects, left backs out)?
+UseLynxNav: Yes
+
+# Add "Re: " prefix on Subject of replies? (Note that it will be added
+# in Internet email and Usenet areas regardless of this setting.)
+ReOnReplies: Yes
+
+# Wrap quoted text at this column width (including quote marks)
+QuoteWrapCols: 78
+
+# Maximum lines per part for reply split (see docs)
+MaxLines: 0
+
+# 8-bit character set for SOUP packets (see docs)
+outCharset: iso-8859-1
+
+# Quoted-printable options for outgoing messages (see docs)
+UseQPMailHead: Yes
+UseQPNewsHead: Yes
+UseQPMail: Yes
+UseQPNews: No
+
+# Suppress help messages (use more of the screen for content)
+ExpertMode: No
+
+# For QWK only: Generate indexes from MESSAGES.DAT instead of *.NDX
+IgnoreNDX: No
+
+# Allow use of the mouse?
+Mouse: Yes
