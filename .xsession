@@ -19,7 +19,7 @@ xrdb -load ~/.Xresources
 # st &
 xscreensaver --no-splash &
 xbattbar -a &
-xbatt &
 # (while emacs --iconic; do done) &
 # fvwm
+{ sleep 1; icesh sync; xbatt; } &
 icewm-session
