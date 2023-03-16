@@ -12,3 +12,5 @@ Emacs.geometry	 : 80x30
 Emacs.font	 : Luxi Mono-8
 
 XTerm*loginShell : true
+XTerm*backarrowKeyIsErase: true
+XTerm*metaSendsEscape: true
