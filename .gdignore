@@ -1,0 +1,8 @@
+/.bash_history
+/.bash_logout
+/.gd/
+/.lesshst
+/.ssh/authorized_keys
+/.ssh/*rsa*
+/.viminfo
+/.ssh/known_hosts*
