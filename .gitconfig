@@ -1,0 +1,6 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Mika Feiler
+	email = m@mikf.pl
+#	email = Mika Feiler@LAPTOP-DK4FTOL7.(none)
