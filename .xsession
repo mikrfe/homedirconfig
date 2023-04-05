@@ -21,5 +21,5 @@ xscreensaver --no-splash &
 xbattbar -a &
 # (while emacs --iconic; do done) &
 # fvwm
-{ sleep 1; icesh sync; xbatt; } &
+{ sleep 1; icesh sync; sleep 3; xbatt; } &
 icewm-session
