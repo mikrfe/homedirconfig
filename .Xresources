@@ -1,0 +1,17 @@
+XIdle*timeout	: 300
+XIdle*program	: /usr/X11R6/bin/xlock
+
+XIdle*position	: sw
+XIdle*delay	: 5
+
+XLock.dpmsoff    : 1
+XLock.dpmsstandby: 5
+XLock.mode       : blank
+
+Emacs.geometry	 : 80x30
+Emacs.font	 : Luxi Mono-8
+
+XTerm*loginShell : true
+XTerm*backarrowKey: true
+XTerm*metaSendsEscape: true
+XTerm*deleteIsDEL: false

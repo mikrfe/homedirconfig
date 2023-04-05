@@ -1,0 +1,4 @@
+[submodule "emacs.d"]
+	path = .emacs.d
+	url = git@github.com:mkf/mkf.emacs.d
+	branch = sturdy-obsd

@@ -1,0 +1,23 @@
+[miyanet]
+	Address        =miyanet.moe
+	Port           =23
+	Added          =Mar 14 2023 12:45:12
+	LastConnected  =Mar 14 2023 21:02:29
+	TotalCalls     =8
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	ScreenMode     =Current
+	NoStatus       =false
+	DownloadPath   =/home/mf/
+	UploadPath     =/home/mf/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
