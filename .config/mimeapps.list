@@ -8,6 +8,8 @@ x-scheme-handler/feed=userapp-SeaMonkey-CRDSH1.desktop
 application/rss+xml=userapp-SeaMonkey-CRDSH1.desktop
 application/x-extension-rss=userapp-SeaMonkey-CRDSH1.desktop
 x-scheme-handler/tg=userapp-Telegram Desktop-UK9511.desktop
+x-scheme-handler/http=userapp-SeaMonkey-CRDSH1.desktop
+x-scheme-handler/https=userapp-SeaMonkey-CRDSH1.desktop
 
 [Added Associations]
 x-scheme-handler/mailto=userapp-SeaMonkey-CRDSH1.desktop;
@@ -20,3 +22,5 @@ application/rss+xml=userapp-SeaMonkey-CRDSH1.desktop;
 application/x-extension-rss=userapp-SeaMonkey-CRDSH1.desktop;
 application/x-xpinstall=seamonkey.desktop;
 x-scheme-handler/tg=userapp-Telegram Desktop-UK9511.desktop;
+x-scheme-handler/http=userapp-SeaMonkey-CRDSH1.desktop;
+x-scheme-handler/https=userapp-SeaMonkey-CRDSH1.desktop;
