@@ -109,3 +109,5 @@
 /.sh_history
 /.config/beets/library.db
 /.config/beets/state.pickle
+
+/.lowsecrets.profile

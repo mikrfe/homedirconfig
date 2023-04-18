@@ -9,3 +9,4 @@ export EDITOR
 VISUAL=ne
 export VISUAL
 export ENV="/home/mf/.kshrc"
+. "$HOME/.lowsecrets.profile"
