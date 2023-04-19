@@ -5,26 +5,37 @@ kp() {
 	typeset kpo
 	set -A kpo
 	[[ "x$_KEPDBK" != x ]] && set -A kpo -- -k "$_KEPDBK"
+	typeset _kpo="${#kpo[@]}"
+
 	typeset kpcmd
 	if [ $# -eq 0 ]; then kpcmd=open
 	elif echo "$1" | fgrep -qxf /tmp/_kp_help
 	then kpcmd="$1"; shift
 	else kpcmd=show
 	fi
-	[[ '--' == "$1" ]] ||
-	while [[ "-" == "${1%%[!-]!(-)}" ]]
-	do set -A kpo -- "${kpo[@]}" "$1"
+	# shifted one if command known
+
+	while [[ '--' != "$1" ]] && [[ "-" == "${1%%[!-]*}" ]]
+	do kpo[${#kpo[*]}]="$1"
 	shift
 	done
+	# shifted and kpo'd while not -- but starting with -
+
 	typeset a
-	if [[ '--' == "$1" ]] then shift; else
-		# for a; do [ "-" == "${1%%[!-]*}" ]
-		[ ${#kpo[@]} -ne 0 -a $# -ne 0 ] && {
-			until let $#  || [[ '--' == $1 ]]
-			do set -A kpo -- "${kpo[@]}" "$1"
-			shift; done; let $# ||
-		{ >&2 echo "option placement ambiguity, use '--' please."
-		return 1; }; }
+	if [[ '--' == "$1" ]] then shift
+	# if we stopped at -- then go past it
+	# if it was not -- but end of starting with dash
+	elif [ ${#kpo[@]} -ne ${_kpo} ] && [ $# -ne 0 ]
+	then	while [ $# -ne 0 ] && [[ '--' != "$1" ]]
+		do	kpo[${#kpo[*]}]="$1"
+			shift
+		done
+		# kpo'd and shifted while still any and we're not at a --
+		if [ $# -eq 0 ] #no more left, no -- found
+		then	>&2 echo "option placement ambiguity, use '--' please."
+			return 1
+		else shift
+		fi
 	fi
 	case "$kpcmd" in
 	diceware|estimate|generate|help)
