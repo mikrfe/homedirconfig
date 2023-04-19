@@ -15,6 +15,7 @@ _gdignore() {
 gdignore() {
 	>> "$HOME/.gdignore" _gdignore "$@"
 }
+. "$HOME/.kp.ksh"
 alias pkg_add='doas pkg_add'
 oldpath="$PATH"
 PATH="$HOME/bin:/bin:/sbin"
