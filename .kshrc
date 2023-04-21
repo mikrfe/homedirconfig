@@ -16,7 +16,7 @@ unset oldpath
 export EDITOR=ne
 export VISUAL=ne
 set -o emacs
-HISTFILE="/home/mf/.sh_history"
+HISTFILE="$HOME/.sh_history"
 HISTCONTROL=ignoredups
 HISTSIZE=9999
 MAIL=/var/mail/"$USER"
