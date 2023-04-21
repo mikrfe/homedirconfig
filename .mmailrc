@@ -19,22 +19,22 @@ QuoteHead: -=> %f wrote to %t <=-
 InetQuote: On %d, %f wrote:
 
 # Base directories (derived from $HOME or $MMAIL)
-mmHomeDir: /home/mf/mmail
-TempDir: /home/mf/mmail
+mmHomeDir: /home/mi/mmail
+TempDir: /home/mi/mmail
 
 # MultiMail will look for packets here
-PacketDir: /home/mf/mmail/down
+PacketDir: /home/mi/mmail/down
 
 # Reply packets go here
-ReplyDir: /home/mf/mmail/up
+ReplyDir: /home/mi/mmail/up
 
 # Saved messages go in this directory, by default
-SaveDir: /home/mf/mmail/save
+SaveDir: /home/mi/mmail/save
 
 # Full paths to the address book, tagline and color specification files
-AddressBook: /home/mf/mmail/addressbook
-TaglineFile: /home/mf/mmail/taglines
-ColorFile: /home/mf/mmail/colors
+AddressBook: /home/mi/mmail/addressbook
+TaglineFile: /home/mi/mmail/taglines
+ColorFile: /home/mi/mmail/colors
 
 # Color or monochrome? (Mono mode uses the default colors)
 UseColors: Yes

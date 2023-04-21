@@ -10,8 +10,8 @@
 	ConnectionType =Telnet
 	ScreenMode     =Current
 	NoStatus       =false
-	DownloadPath   =/home/mf/
-	UploadPath     =/home/mf/
+	DownloadPath   =/home/mi/
+	UploadPath     =/home/mi/
 	LogFile        =
 	TransferLogLevel=Info
 	TelnetLogLevel =Info
