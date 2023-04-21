@@ -15,11 +15,16 @@ do
 done
 
 xrdb -load ~/.Xresources
+#export QT_AUTO_SCREEN_SET_FACTOR=0
+#export QT_SCALE_FACTOR=0.7
+#export QT_FONT_DPI=72
+#export GDK_SCALE=0.7
 # xidle &
 # st &
 xscreensaver --no-splash &
 xbattbar -a &
 # (while emacs --iconic; do done) &
 # fvwm
-{ sleep 1; icesh sync; sleep 3; xbatt; } &
+{ sleep 1; icesh sync; sleep 30; xbatt; } &
+# dbus-daemon --session --fork
 icewm-session
